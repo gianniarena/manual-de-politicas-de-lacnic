@@ -1,0 +1,2699 @@
+<h1>MANUAL DE POLÍTICAS DE LACNIC (v2.15 - 19/05/2022 )</h1>
+<p><strong>RESUMEN</strong></p>
+<p>La distribuci&oacute;n de espacio de los recursos de numeraci&oacute;n sigue un esquema jer&aacute;rquico. Para el
+   &aacute;rea de Latinoam&eacute;rica y el Caribe el espacio de direcciones IP es distribuido por IANA a LACNIC para
+   ser a su vez distribuidos y asignados a Registros Nacionales de Internet (NIR), Proveedores de Servicios de Internet
+   (ISP) y usuarios finales. Asimismo la administraci&oacute;n de los N&uacute;meros de Sistemas Aut&oacute;nomos y el
+   espacio de resoluci&oacute;n inversa conforman una parte cr&iacute;tica para la eficiente operaci&oacute;n de
+   Internet a nivel global. En este documento describimos las pol&iacute;ticas y procedimientos asociados con la
+   distribuci&oacute;n, asignaci&oacute;n y administraci&oacute;n del espacio de direcciones IPv4, IPv6, ASN y la
+   delegaci&oacute;n del espacio de resoluci&oacute;n inversa asignados a Latinoam&eacute;rica y el Caribe. Estas
+   pol&iacute;ticas deber&aacute;n ser seguidas por los NIRs, ISPs y los usuarios finales.</p>
+<p>Control de Cambio:<br /> Versi&oacute;n 1.0 - Versi&oacute;n Original.<br /> Versi&oacute;n 1.1 - Agregado
+   Pol&iacute;tica Global ASNs (LAC-2007-08).<br /> Versi&oacute;n 1.2 - Agregado Pol&iacute;tica Global de
+   Distribuci&oacute;n del Espacio IPv4 Remanente (LAC-2008-01).</p>
+<p>Versi&oacute;n 1.3 &ndash; Agregado Pol&iacute;tica Distribuciones IPv6 con distribuciones previas de IPv4
+   (LAC-2009-02)</p>
+<p>Agregado Pol&iacute;tica Formato de representaci&oacute;n ASPLAIN para ASN de 32 bits (LAC-2009-03)</p>
+<p>Agregado Pol&iacute;tica Distribuci&oacute;n de ASNs s&oacute;lo de 16 bits (LAC-2009-05)</p>
+<p>Agregado Pol&iacute;tica Cambio en tama&ntilde;o m&iacute;nimo de distribuci&oacute;n inicial de IPv4 a ISPs a /22
+   (LAC-2009-07)</p>
+<p>Versi&oacute;n 1.4 &ndash; Agregado Pol&iacute;tica Transferencias de bloques IPv4 dentro de la regi&oacute;n LACNIC
+   (LAC-2009-04)</p>
+<p>Agregado Pol&iacute;tica Recuperaci&oacute;n de Recursos (LAC-2009-06)</p>
+<p>Agregado Pol&iacute;tica Modificaci&oacute;n a la Pol&iacute;tica de Asignaci&oacute;n Inicial de Prefijos Ipv6
+   (LAC-2007-01)</p>
+<p>Versi&oacute;n 1.5 &ndash; Agregado Pol&iacute;tica Modificaci&oacute;n: 2.3.3.3. Distribuciones directas a
+   proveedores de servicio de internet (LAC-2009-09)</p>
+<p>Agregado Pol&iacute;tica Distribuci&oacute;n y asignaci&oacute;n inicial de direcciones IPv4 a ISPs (LAC-2010-05)</p>
+<p>Agregado Pol&iacute;tica Asignaciones a Usuarios Finales con necesidades de Interconexi&oacute;n (LAC-2010-06)</p>
+<p>Versi&oacute;n 1.5.1 &ndash; Se corrige error de tipeo en cap&iacute;tulo 7.</p>
+<p>Versi&oacute;n 1.6 &ndash; Agregado Pol&iacute;tica Inclusi&oacute;n del ASN en el whois cuando estuviera disponible
+   (LAC-2010-03)</p>
+<p>Versi&oacute;n 1.7 &ndash; Agregado Pol&iacute;tica Remoci&oacute;n de imposiciones t&eacute;cnicas para la
+   desagregaci&oacute;n de un Bloque IPv6 (LAC-2011-01)</p>
+<p>Agregado Pol&iacute;tica Modificaci&oacute;n 2.3.3- Distribuci&oacute;n y asignaci&oacute;n inicial de direcciones
+   IPv4 (LAC-2011-02)</p>
+<p>Versi&oacute;n 1.7.1 &ndash; Se agrega referencia al Reporte de Distribuci&oacute;n de Espacio IPv4 en la
+   secci&oacute;n 2.3.4</p>
+<p>Versi&oacute;n 1.8 &ndash; Agregado Pol&iacute;tica Modificaci&oacute;n 2.3.4 - Pol&iacute;ticas para la
+   distribuci&oacute;n de espacio adicional de direcciones IPv4 (LAC-2011-03)</p>
+<p>Agregado Pol&iacute;tica A&ntilde;adir el rengl&oacute;n 6 a la secci&oacute;n 11.1 del Manual de Pol&iacute;ticas
+   sobre agotamiento del espacio IPv4 (LAC-2011-04)</p>
+<p>Agregado Pol&iacute;tica Distribuciones / Asignaciones para una terminaci&oacute;n suave de recursos Ipv4
+   (LAC-2011-06)</p>
+<p>Versi&oacute;n 1.9 &ndash; Agregado Pol&iacute;tica Global para la Distribuci&oacute;n de Espacio de Direcciones IPv4
+   por Parte de la IANA Post Agotamiento (LAC-2011-05)</p>
+<p>Versi&oacute;n 1.10 &ndash; Agregado Pol&iacute;tica Registro de Asignaciones (LAC-2012-02)</p>
+<p>Agregado Pol&iacute;tica Reserva especial de distribuciones/asignaciones IPV4 para nuevos miembros (LAC-2012-03)</p>
+<p>Version 1.11 &ndash; Agregado Pol&iacute;tica Distribuciones/asignaciones de espacio IPv4 distribuido por la IANA
+   post agotamiento (LAC-2012-05)</p>
+<p>Agregado Pol&iacute;tica Actualizaci&oacute;n RIRs-on-48 (LAC-2012-09)</p>
+<p>Agregado Pol&iacute;tica Distribuci&oacute;n de direcciones IPv6 mayores que /32 (LAC-2012-10)</p>
+<p>Agregado Pol&iacute;tica Eliminar requisito para la solicitud inicial de direcciones IPv4 para Usuarios Finales
+   (LAC-2012-12)</p>
+<p>Versi&oacute;n 1.12 &ndash; Agregado Ap&eacute;ndice 5, Requisitos para los candidatos para el ASO AC</p>
+<p>Versi&oacute;n 2.0 &ndash; Agregado Pol&iacute;tica LAC-2013-02, Principios para la distribuci&oacute;n de recursos
+   de numeraci&oacute;n</p>
+<p>Versi&oacute;n 2.1 &ndash; Agregado Pol&iacute;tica LAC-2013-03v2, Adaptar la pol&iacute;tica de
+   distribuciones/asignaciones para el agotamiento de direcciones IPv4.</p>
+<p>Versi&oacute;n 2.2 &ndash; Agregado Pol&iacute;ticas LAC &ndash; 2013-4, Manejo de Recursos de Internet Devueltos.
+</p>
+<p>Versi&oacute;n 2.3 &ndash; Agregado Pol&iacute;ticas LAC - 2014-2: Modificaci&oacute;n del texto de requisitos para
+   distribuci&oacute;n de ASN.</p>
+<p>Versi&oacute;n 2.4 &ndash; Agregado Pol&iacute;tica LAC &ndash; 2015-6, Modificaci&oacute;n de Alcance de Fase 2 de
+   Agotamiento de IPv4 en la Regi&oacute;n.</p>
+
+<h1>1. DEFINITIONS</h1>
+<p>The following terms and their definitions are of great importance for the correct comprehension of the objectives,
+   context and policies described herein.</p>
+<p>IP address allocation follows a hierarchical scheme. Responsibility for the administration of number resources is
+   distributed globally in accordance with the hierarchical structure shown below.</p>
+<p><img src="https://www.lacnic.net/innovaportal/file/681/1/jerarquia_en.jpg" alt="" /></p>
+<h2><a name="_Toc1"></a>1.1.IANA (Internet Assigned Number Authority)</h2>
+<p>IANA is responsible for allocating part of the global IP address space and autonomous system numbers to Regional
+   Registries according to established needs.</p>
+<h2><a name="_Toc2"></a>1.2.Internet Registry (IR)</h2>
+<p>An Internet Registry (IR) is an organization responsible for allocating IP address space to its members or customers
+   and for registering those allocations. IRs are classified according to their main function and geographic area of
+   coverage as indicated in the hierarchical structure defined in the figure above.</p>
+<h2><a name="_Toc3"></a>1.3.Regional Internet Registry (RIR)</h2>
+<p>Regional Internet Registries (RIRs) are established and authorized by their respective regional communities, and
+   recognized by the IANA to serve and represent large geographical regions. The primary role of RIRs is to manage and
+   allocate Internet resources within their own respective regions.</p>
+<h2><a name="_Toc4"></a>1.4.National Internet Registry (NIR)</h2>
+<p>A National Internet Registry (NIR) primarily allocates Internet resources to its members or constituents, which are
+   generally LIRs.</p>
+<h2><a name="_Toc5"></a>1.5.Local Internet Registry (LIR)</h2>
+<p>A Local Internet Registry (LIR) is an IR that primarily assigns Internet resources to the users of the network
+   services it provides. LIRs are generally ISPs, whose customers are primarily end users and possibly other ISPs.</p>
+<h2><a name="_Toc6"></a>1.6.Internet Service Provider (ISP)</h2>
+<p>Internet Service Providers mainly assign IP address space to end users of the network services they provide. Their
+   clients may be other ISPs. ISPs do not have geographical restrictions as do NIRs.</p>
+<h2><a name="_Toc7"></a>1.7.End Site or End User (EU)</h2>
+<p>An end site is defined as an end user (subscriber) that has a legal or commercial relationship (the same or
+   associated entities) with an Internet service provider which involves:</p>
+<ul>
+   <li>the service provider assigning address space to the end user</li>
+   <li>the service provider offering transit services for the end user towards other sites</li>
+   <li>the service provider transporting the end user&rsquo;s traffic</li>
+   <li>the service provider announcing an aggregated route prefix which contains the address space assigned by LACNIC to
+      the end user</li>
+</ul>
+<h2><a name="_Toc8"></a>1.8.Allocate</h2>
+<p>To allocate means to distribute address space to IRs for the purpose of subsequent distribution by them.</p>
+<h2><a name="_Toc9"></a>1.9.Assign</h2>
+<p>To assign means to delegate address space to an end user, to be exclusively used within the infrastructure operated
+   by said end user, as well as for interconnection purposes.</p>
+<p>The assigned address space must only be used by the original recipient of the assignment, as well as for third-party
+   devices provided they are operating within said infrastructure.</p>
+<p>&nbsp;</p>
+<p>Therefore, sub-assignments to third parties outside said infrastructure (for example, the use of end-user assignments
+   for ISPs or similar clients) and providing addresses to third parties in data centers (and others) are not allowed.
+</p>
+<h2><a name="_Toc10"></a>1.10.The Internet Registry System</h2>
+<p>The Internet registry system has been established with the aim of enforcing the objectives of exclusivity,
+   preservation, routability and information. This system consists of hierarchically organized Internet registries
+   (IRs). Internet number resources (addresses, ASNs, others) are typically assigned to end users by ISPs or NIRs.<br />
+   <br /> These resources are previously allocated to NIRs and ISPs by the Regional Internet Registries.<br /> <br />
+   Under this system, end users are organizations that operate networks that use the resources. Just as LACNIC, NIRs
+   maintain resources for making assignments to end users or allocations to Internet Service Providers. Assigned
+   resources are used to operate networks, whereas allocated resources are kept by Internet Registries for their future
+   assignment to end users.
+</p>
+<p>Note that the resources allocated or assigned by LACNIC or by the NIRs are to be used exclusively by their recipient
+   or by third parties authorized by the recipient, provided that the policies currently in force allow such use. We
+   recommend that such authorizations can be verified using RPKI.</p>
+<h2><a name="_Toc11"></a>1.11.Non-Guaranteed Routability</h2>
+<p>Neither LACNIC nor the NIRs will guarantee the routability of allocated or assigned addresses.</p>
+<p>Resource recipients are responsible for negotiating such routability with their connectivity providers. LACNIC shall
+   provide the corresponding guidance when necessary.</p>
+<p>However, allocated or assigned resources must be announced within a maximum of 90 days, except in those cases where
+   the need not to announce the resources is justified.</p>
+<p>RIRs must apply operational procedures that reduce the possibility of fragmentation of the address space to minimize
+   the risk of loss of routability.</p>
+<h2><a name="_Toc12"></a>1.12.Multihomed</h2>
+<p>A site is considered to be multihomed if it receives full-time connectivity from more than one Internet service
+   provider and has one or more routing prefixes announced by at least two of its upstream providers. Independent
+   providers refer to the fact that one does not reach the Internet through the other.</p>
+<h2><a name="_Toc13"></a>1.13.RPKI ASN 0 ROA</h2>
+<p>LACNIC will create specific Routing Origin Authorizations (ROAs) in the RPKI infrastructure with AS 0 in the Origin
+   ASN field and the list of unallocated or unassigned Internet Number Resources exclusively under LACNIC administration
+   in the Prefixes list such ROAs.</p>
+<p>The number of the before mentioned ROAs and any other technical parameter of it will be under LACNIC discretion</p>
+<p>Only LACNIC would have authority to create RPKI ROAs for Internet Number Resources not yet allocated or assigned or
+   either recovered or returned, to which LACNIC is the rightful custodian.</p>
+<p>Once an Internet Number Resource is allocated or assigned, LACNIC will invalidate ROAs that contain such resources
+   and will issue new ROAs that do not include them, as necessary.</p>
+<h2><a name="_Toc14"></a>1.14.Principles for Proper Administration and Stewardship</h2>
+<p>The fundamental principle is to distribute unique Internet numbering resources according to the technical and
+   operational needs of the networks currently using, or that will use, these numbering resources, allowing the
+   sustainable growth of the Internet.</p>
+<p>The numbering resources under the stewardship of LACNIC must be distributed among organizations legally constituted
+   within its service region [COBERTURA] and mainly *serving networks and services operating in this region. External
+   clients connected directly to main infrastructure located in the region are allowed.</p>
+<p>*&ldquo;Mainly&rdquo; is understood to mean more than 50%.</p>
+<p>"Anycast" services that use numbering resources outside said region are acceptable as long as they are provided by an
+   organization legally constituted within the service region [COBERTURA] and at least one copy of the service is hosted
+   on local infrastructure.</p>
+<p>Upon obtaining any type of resources from LACNIC or from the corresponding NIR, any legacy resources held by the
+   recipient will no longer be considered legacy resources.</p>
+<h3><a name="_Toc15"></a>1.14.1.Rational Distribution</h3>
+<p>Internet numbering resources must be distributed ensuring their uniqueness and considering the technical and
+   operational needs of the networks and infrastructure that use them. Considerations must be made to take into account
+   potential limitations on the availability of each numbering resource at the time of their distribution.</p>
+<h3><a name="_Toc16"></a>1.14.2.Public Information Registry</h3>
+<p>Providing a public registry of information relating to the numbering resources that have been distributed is a
+   fundamental requirement for the Internet numbering resources distribution system.</p>
+<p>Aimed mainly at ensuring the resources' uniqueness while providing usage and contact information in case operational
+   or security problems arise. Also, to allow analyzing the use of these resources.</p>
+<h3><a name="_Toc17"></a>1.14.3.Hierarchical Distribution</h3>
+<p>The hierarchical distribution of Internet numbering resources seeks to contribute to the Internet routing system's
+   scalability, allowing resources to be grouped and announced as concisely as possible.</p>
+<p>In some cases, the goals mentioned above may be in conflict with each other or with the particular interests of the
+   requesting organizations. In these cases, a careful analysis of each particular situation is required so that an
+   appropriate compromise can be reached among the conflicting parties.</p>
+<h2><a name="_Toc18"></a>1.15. Resource Requests</h2>
+<p>Resource requests to LACNIC or to the corresponding NIRs will be made under the systems in force.</p>
+<p>Any request that is considered incomplete will be returned to the applicant with the appropriate instructions so that
+   it can be completed.</p>
+<div class="alert alert-amarillo">
+   <p>El presente documento y/o informaci&oacute;n ha sido redactado en idioma espa&ntilde;ol, en virtud de que el mismo
+      es el idioma oficial en Uruguay, pa&iacute;s en donde LACNIC se encuentra establecida y cuyas regulaciones debe
+      cumplir. Asimismo, los documentos y/o informaciones no oficiales tambi&eacute;n son escritos en espa&ntilde;ol, en
+      virtud de que es el idioma en que se comunican y trabajan la mayor&iacute;a de los asesores y funcionarios de
+      LACNIC. No obstante lo cual, realizamos nuestros mejores esfuerzos para que la traducci&oacute;n del mismo sea
+      fehaciente y constituya una gu&iacute;a para nuestros asociados no hispanoparlantes, sin embargo puede que existan
+      discrepancias entre la misma y el documento y/o informaci&oacute;n original redactado en espa&ntilde;ol. En
+      cualquier caso prevalecer&aacute; siempre el texto original redactado en espa&ntilde;ol.</p>
+</div>
+<h1>2. DIRECCIONES IPv4</h1>
+<h2><a name="_Toc20"></a>2.1.ALCANCE</h2>
+<p>Este cap&iacute;tulo describe el sistema de administraci&oacute;n de recursos de Internet en el &aacute;rea de
+   Latinoam&eacute;rica y el Caribe. Particularmente describe las reglas y gu&iacute;as que gobiernan la
+   distribuci&oacute;n de los bloques de direcciones IPv4 asignados a Latinoam&eacute;rica y el Caribe. En el caso de
+   direcciones IP las reglas establecidas en este cap&iacute;tulo est&aacute;n relacionadas para todos los bloques de
+   direcciones IPv4 distribuidas o asignadas v&iacute;a LACNIC y las anteriores distribuidas y asignadas por ARIN.</p>
+<p>Este cap&iacute;tulo no describe espacio de direcciones de Internet privadas y espacios de direcciones
+   <em>multicast</em>.
+</p>
+<p>Este cap&iacute;tulo tampoco describe la administraci&oacute;n del espacio del direccionamiento IPv6 el cual es
+   tratado en el cap&iacute;tulo de "Pol&iacute;ticas para la distribuci&oacute;n y asignaci&oacute;n de direcciones
+   IPv6". Se hace aqu&iacute; una distinci&oacute;n entre <strong>distribuci</strong><strong>&oacute;</strong><strong>n
+   </strong>y <strong>asignaci&oacute;</strong><strong>n </strong>de direcciones IP. Las direcciones son
+   <strong>distribuidas </strong>a los NIRs e ISPs para que a su vez sean <strong>asignadas </strong>a sus usuarios
+   finales.
+</p>
+<h2><a name="_Toc21"></a>2.2.ESPACIO DE DIRECCIONES IPv4 Y EL SISTEMA DE REGISTRO DE INTERNET</h2>
+<h3><a name="_Toc22"></a>2.2.1.Tipo de direcciones IPv4</h3>
+<p>Para prop&oacute;sitos de este cap&iacute;tulo las direcciones IPv4 son n&uacute;meros binarios de 32 bits que son
+   usados como direcciones en los protocolos IPv4, el cual es utilizado en Internet. Existen tres tipos de direcciones
+   IPv4.</p>
+<h4><a name="_Toc23"></a>2.2.1.1.Direcciones IPv4 p&uacute;blicas</h4>
+<p>Las direcciones IPv4 p&uacute;blicas constituyen el espacio de direcciones de Internet. Estas son distribuidas para
+   ser globalmente &uacute;nicas de acuerdo a los objetivos que se describir&aacute;n m&aacute;s adelante en este
+   documento. El principal prop&oacute;sito de este espacio de direcciones es permitir la comunicaci&oacute;n usando
+   IPv4 sobre Internet.</p>
+<p>Un prop&oacute;sito secundario es permitir la comunicaci&oacute;n entre redes privadas interconectadas.</p>
+<h4><a name="_Toc24"></a>2.2.1.2.Direcciones IPv4 privadas</h4>
+<p>Algunos rangos de direcciones IPv4 han sido reservados para la operaci&oacute;n de redes privadas. Cualquier
+   organizaci&oacute;n puede usar estas direcciones IPv4 en sus redes privadas sin la necesidad de solicitarlo a
+   alg&uacute;n Registro de Internet. La principal condici&oacute;n establecida para el uso de direcciones IPv4 privadas
+   es que los dispositivos que usen estas direcciones IPv4 no necesiten ser alcanzados desde Internet.</p>
+<p>Para una descripci&oacute;n m&aacute;s detallada acerca del espacio de direcciones IPv4 privadas, por favor consulte
+   el <strong>RFC 1918. </strong></p>
+<h4><a name="_Toc25"></a>2.2.1.3.Direcciones IPv4 especiales y reservadas</h4>
+<p>Estas son rangos de direcciones IPv4 reservadas para aplicaciones como el <em>multicasting</em>, estas direcciones
+   IPv4 est&aacute;n descritas en el <strong>RFC 1112</strong> y para prop&oacute;sitos de este cap&iacute;tulo
+   est&aacute;n m&aacute;s all&aacute; del contexto del mismo.</p>
+<h2><a name="_Toc26"></a>2.3.POL&Iacute;TICAS PARA LA DISTRIBUCI&Oacute;N Y ASIGNACI&Oacute;N DE DIRECCIONES IPv4</h2>
+<h3><a name="_Toc27"></a>2.3.1.Introducci&oacute;n</h3>
+<p>En este cap&iacute;tulo se describir&aacute; c&oacute;mo un Registro de Internet (Para futuras referencias este
+   concepto comprende a Proveedores de Servicios de Internet y Registros Nacionales de Internet) puede obtener una
+   distribuci&oacute;n de direcciones IPv4 y c&oacute;mo ese espacio distribuido deber&aacute; ser administrado.</p>
+<p>Los espacios de direcciones IPv4 son distribuidos a los Registros de Internet (IRs) usando un modelo de lento inicio.
+   Las distribuciones est&aacute;n basadas en una necesidad justificada, no solamente sobre las bases de
+   predicci&oacute;n de clientes. Debido a que el n&uacute;mero de direcciones IPv4 es limitado, muchos factores deben
+   considerarse en la delegaci&oacute;n de espacios de direcciones IPv4. La idea es distribuir el espacio de direcciones
+   IPv4 a los Registros de Internet en la misma relaci&oacute;n en que estos asignar&aacute;n las direcciones IPv4 a sus
+   usuarios.</p>
+<p>El tama&ntilde;o de una distribuci&oacute;n a un IR en particular est&aacute; basado en la tasa en la cual ha
+   asignado anteriormente espacios de direcciones IPv4 a sus clientes. El objetivo es evitar la existencia de grandes
+   bloques que no sean asignados a los usuarios finales. Debido a restricciones de tipo t&eacute;cnico y la posibilidad
+   de sobrecarga en las tablas de rutas, deber&aacute;n ser implementadas ciertas pol&iacute;ticas para asegurar el
+   cumplimiento de los objetivos de conservaci&oacute;n y ruteabilidad. En este cap&iacute;tulo se habla de
+   tama&ntilde;os de prefijos y tama&ntilde;os de bloques. La notaci&oacute;n est&aacute;ndar implica que cuando se
+   hable de prefijos mayores, se hace referencia a bloques de menor tama&ntilde;o. Por ejemplo, cuando se menciona que
+   cierta pol&iacute;tica se aplica a prefijo mayor a un /20, esto significa que se est&aacute; hablando de un bloque
+   menor de 16 /24.</p>
+<h3><a name="_Toc28"></a>2.3.2.Aspectos a considerar en la administraci&oacute;n de direcciones IPv4</h3>
+<p>La presente secci&oacute;n describe un conjunto de aspectos sobre los cuales se debe basar la relaci&oacute;n tanto
+   entre los Registros de Internet y sus clientes, como entre los Registros de Internet y LACNIC.</p>
+<h4><a name="_Toc29"></a>2.3.2.1.Las direcciones IPv4 son delegadas</h4>
+<p>LACNIC distribuir&aacute; recursos de Internet en un esquema de delegaci&oacute;n. Este esquema de
+   distribuci&oacute;n de los recursos tendr&aacute; una validez de un a&ntilde;o. Es posible la renovaci&oacute;n de
+   esta distribuci&oacute;n y estar&aacute; sujeta a las condiciones establecidas en el momento de la renovaci&oacute;n.
+</p>
+<h4><a name="_Toc30"></a>2.3.2.2.Pol&iacute;tica de lento inicio</h4>
+<p>Los bloques de direcciones IPv4 son distribuidos a los IRs usando un procedimiento llamado de lento inicio. Los
+   Proveedores de Servicios de Internet que soliciten bloques de direcciones IPv4 portables (independientes del
+   proveedor) por primera vez recibir&aacute;n una cantidad m&iacute;nima bas&aacute;ndose en sus requerimientos
+   inmediatos, a excepci&oacute;n de lo establecido en el punto 2.3.3.3. ("Distribuciones directas a proveedores de
+   servicio internet").</p>
+<p>A partir de esta distribuci&oacute;n inicial los bloques distribuidos pueden ser incrementados bas&aacute;ndose en la
+   verificaci&oacute;n de la utilizaci&oacute;n de los bloques en uso de acuerdo a la informaci&oacute;n provista a
+   LACNIC. De esta manera LACNIC ser&aacute; responsable de determinar las distribuciones iniciales y subsecuentes. Las
+   distribuciones de direcciones IPv4 iniciales deber&aacute;n permitir a los IRs operar al menos por doce meses sin
+   requerir nuevas ampliaciones.</p>
+<p>Las distribuciones iniciales no estar&aacute;n basadas sobre ninguna restricci&oacute;n de ruteo ni actuales ni
+   futuras, sino sobre necesidades reales y comprobables de uso de direcciones IPv4.</p>
+<p>Asimismo, el n&uacute;mero de direcciones IPv4 proyectado por el solicitante es &uacute;til para la planeaci&oacute;n
+   de los requerimientos futuros del mismo.</p>
+<h4><a name="_Toc31"></a>2.3.2.3.Bloques distribuidos</h4>
+<p>Para asegurar la eficiente implementaci&oacute;n y uso de esquemas sin clases (CIDR), LACNIC distribuir&aacute;
+   bloques de direcciones IPv4 en base a los l&iacute;mites soportados por este esquema. Para ayudar en el eficiente
+   despliegue de CIDR, los Proveedores de Servicios de Internet (ISPs) y Usuarios Finales son alentados a solicitar
+   espacio de direcciones IP inicialmente a sus proveedores inmediatos (<em>upstream providers</em>). El proveedor
+   inmediato deber&aacute; mantener el control de los bloques asignados al t&eacute;rmino del contrato con sus clientes.
+</p>
+<h4><a name="_Toc32"></a>2.3.2.4.Evitar la fragmentaci&oacute;n de bloques</h4>
+<p>Las direcciones IP bajo el esquema CIDR son distribuidas a los IRs en bloques. Se recomienda que la
+   publicaci&oacute;n de estos bloques en las tablas de ruteo permanezca intacta. M&aacute;s espec&iacute;ficamente, los
+   ISPs deber&aacute;n tratar las asignaciones de direcciones IP a sus clientes como pr&eacute;stamos por la
+   duraci&oacute;n de la conectividad. En la terminaci&oacute;n del contrato de conectividad de Internet, por ejemplo,
+   si un cliente se cambia a otro ISP, el cliente tendr&aacute; que regresar las direcciones IPv4 que se encuentren
+   actualmente en uso y renumerarlas con las nuevas direcciones IPv4 del nuevo proveedor. Nuevos pedidos de direcciones
+   IP estar&aacute;n condicionados a la finalizaci&oacute;n de esta tarea. El IR deber&aacute; ofrecer suficiente tiempo
+   para que el proceso de renumeraci&oacute;n finalice antes de que estas direcciones IP sean utilizadas de nuevo por
+   otro cliente.</p>
+<h4><a name="_Toc33"></a>2.3.2.5.Documentaci&oacute;n</h4>
+<p>Los Registros de Internet deber&aacute;n utilizar de manera eficiente el conjunto de direcciones IPv4 que les haya
+   sido distribuido. Para este fin, los IRs deben documentar la justificaci&oacute;n de cada asignaci&oacute;n de
+   direcciones IPv4. Ante requerimiento de LACNIC, esta informaci&oacute;n deber&aacute; ser proporcionada por el IR
+   correspondiente. LACNIC no har&aacute; distribuciones complementarias a los Registros de Internet que no tengan
+   correctamente documentado el uso de los bloques que ya se le hayan sido distribuidos previamente. Las distribuciones
+   actuales podr&aacute;n tambi&eacute;n ser revisadas en estos casos.</p>
+<p>La documentaci&oacute;n a solicitar puede incluir:</p>
+<ul>
+   <li>Planes de Ingenier&iacute;a.</li>
+   <li>Plan de subdivisi&oacute;n de redes (<em>subnetting</em>) y agregaciones.</li>
+   <li>Descripci&oacute;n de la topolog&iacute;a de la red.</li>
+   <li>Descripci&oacute;n de planes de ruteo de la red.</li>
+   <li>Comprobantes de inversiones (equipamientos).</li>
+   <li>Otros documentos relevantes.</li>
+</ul>
+<h4><a name="_Toc34"></a>2.3.2.6.Uso del esquema sin clases (CIDR)</h4>
+<p>Debido a los requerimientos de incrementar la eficiencia en la utilizaci&oacute;n de los espacios de direcciones
+   IPv4, todas las distribuciones y o asignaciones son hechas con la suposici&oacute;n de que las organizaciones hacen
+   uso de m&aacute;scaras de subred de longitud variable (VLSM) y esquema sin clases (CIDR) dentro de sus redes.</p>
+<p>El uso de esquemas de clases es generalmente inaceptable debido a la limitada disponibilidad de espacio libre para
+   direcciones IPv4.</p>
+<h4><a name="_Toc35"></a>2.3.2.7.Direccionamiento est&aacute;tico</h4>
+<p>Debido a restricciones en la disponibilidad de direcciones IPv4, el uso de asignaci&oacute;n de direcciones IPv4 de
+   forma est&aacute;tica (ejemplo, una direcci&oacute;n por cliente) para usuarios dial&minus;up no ser&aacute;
+   respaldado de ninguna manera por LACNIC. Se entiende que el uso del direccionamiento est&aacute;tico puede facilitar
+   algunos aspectos administrativos. Sin embargo, la actual tasa de consumo de las direcciones IPv4, no permiten
+   justificar la asignaci&oacute;n de direcciones est&aacute;ticas por razones administrativas. Por esta raz&oacute;n,
+   se espera que las organizaciones que est&aacute;n considerando el uso de asignaci&oacute;n de direcciones IPv4 en
+   forma est&aacute;tica, investiguen e implementen tecnolog&iacute;as de asignaci&oacute;n din&aacute;mica.</p>
+<h4><a name="_Toc36"></a>2.3.2.8.Webhosting</h4>
+<p>Con el desarrollo del protocolo HTTP 1.1 se ha eliminado la necesidad de la reserva de una direcci&oacute;n IP para
+   cada dominio web en casos de m&uacute;ltiples <em>websites</em> en el mismo servidor. LACNIC promueve el desarrollo
+   del alojamiento de p&aacute;ginas web basados en el uso del nombre en contraste al basado en direcciones IPv4.</p>
+<p>Por lo tanto, este &uacute;ltimo caso no ser&aacute; aceptado como justificaci&oacute;n de uso de direcciones IPv4.
+   LACNIC considerar&aacute; las excepciones en que las aplicaciones necesiten el uso de <em>webhosting</em> basado en
+   direcciones IPv4 lo que deber&aacute; ser debidamente descrito y justificado.</p>
+<h4><a name="_Toc37"></a>2.3.2.9. Este punto ha sido intencionalmente dejado en blanco</h4>
+<h4><a name="_Toc38"></a>2.3.2.10. Este punto ha sido intencionalmente dejado en blanco</h4>
+<h4><a name="_Toc39"></a>2.3.2.11. Este punto ha sido intencionalmente dejado en blanco&nbsp;</h4>
+<h4><a name="_Toc40"></a>2.3.2.12.Supervisi&oacute;n de asignaciones</h4>
+<h5><a name="_Toc41"></a><em>2.3.2.12.1.</em> Ventana de asignaci&oacute;n</h5>
+<p>Los ISPs podr&aacute;n hacer asignaciones a sus clientes, de bloques menores de 16 /24 es decir prefijos mayores a
+   /20, siguiendo la pol&iacute;tica definida por LACNIC en el presente documento. En algunos casos, la
+   asignaci&oacute;n deber&aacute; ser consultada con LACNIC o con el NIR correspondiente a los efectos de asegurar la
+   optimizaci&oacute;n del uso del espacio de direcciones IP y la correcta aplicaci&oacute;n de las pol&iacute;ticas de
+   LACNIC.</p>
+<p>LACNIC define como ventana de asignaci&oacute;n, las asignaciones de bloques mayores o iguales a 2 /24 o sea prefijos
+   menores o iguales a /23. Estas asignaciones deber&aacute;n ser consultadas con LACNIC o con el NIR correspondiente.
+   La comunicaci&oacute;n entre los ISPs y LACNIC o el NIR correspondiente, deber&aacute; incluir la misma
+   informaci&oacute;n y justificaciones establecidas para los usuarios finales, contenida en este documento.</p>
+<h5><a name="_Toc42"></a><em>2.3.2.12.2.</em> Distribuciones a los NIRs</h5>
+<p>Los NIRs quedar&aacute;n exceptuados del cumplimiento del punto 3.2.12.1. En su lugar estar&aacute;n sujetos a
+   esquemas de auditor&iacute;as m&aacute;s estrictos de acuerdo a lo estipulado en los contratos entre LACNIC y los
+   NIRs.</p>
+<p>Estas auditor&iacute;as ser&aacute;n hechas al menos una vez al a&ntilde;o y con periodicidad mayor en caso de que
+   sea necesario.</p>
+<h4><a name="_Toc43"></a>2.3.2.13. Registro de asignaciones</h4>
+<p>Todas las asignaciones de bloques IPv4 de prefijos /29 o menores (bloques mayores) realizadas por ISPs a los clientes
+   conectados a su red y los usuarios de los servicios prestados deben registrarse en la base de datos WHOIS de LACNIC
+   en un plazo m&aacute;ximo de 7 d&iacute;as a partir de la asignaci&oacute;n.</p>
+<p><br /> La informaci&oacute;n disponible en la base de datos WHOIS tambi&eacute;n ser&aacute; utilizada por LACNIC
+   cuando analice las solicitudes de bloques IPv4 adicionales realizadas por el ISP.</p>
+<p><br /> El Registro de asignaciones tambi&eacute;n es necesario por los siguientes motivos:</p>
+<p>. Para asegurarse que el IR finaliz&oacute; o est&aacute; finalizando la distribuci&oacute;n de espacio de
+   direcciones de modo que se justifique la distribuci&oacute;n de un nuevo espacio adicional.</p>
+<p>. Para proporcionar informaci&oacute;n a la comunidad Internet sobre cu&aacute;l organizaci&oacute;n est&aacute;
+   usando el espacio de direcciones IPv4 incluyendo a la persona de contacto en caso de problemas de tipo operativo, de
+   seguridad, etc.</p>
+<p><br /> . Para el estudio de distribuciones de direcciones IPv4 en la regi&oacute;n.</p>
+<p>. Para facilitar la geolocalizaci&oacute;n de las subasignaciones realizadas por los miembros en nuestra
+   regi&oacute;n.</p>
+<h5><a name="_Toc44"></a><em>2.3.2.13.1.</em>Informaci&oacute;n necesaria</h5>
+<p>Las asignaciones registradas en la base de datos WHOIS de LACNIC deben incluir la siguiente informaci&oacute;n sobre
+   quien recibe la asignaci&oacute;n: nombre de la organizaci&oacute;n, direcci&oacute;n postal, contactos
+   administrativos, t&eacute;cnicos y de abuso con n&uacute;meros de tel&eacute;fono e correos electr&oacute;nicos
+   actualizados.</p>
+<h6><br /> 2.3.2.13.1.1 Clientes residenciales</h6>
+<p>Los ISPs que ofrezcan servicios a clientes residenciales pueden registrar en la base de datos WHOIS de LACNIC bloques
+   de direcciones en uso por los equipos o &aacute;reas de atenci&oacute;n al cliente, por servicio.</p>
+<p><br /> La informaci&oacute;n que se registre debe indicar el &aacute;rea de servicio, direcci&oacute;n postal
+   principal del ISP, contactos administrativos, t&eacute;cnicos y de abuso del ISP con n&uacute;meros de
+   tel&eacute;fono y correos electr&oacute;nicos actualizados.</p>
+<p><br /> Las asignaciones deben realizarse por bloques de direcciones que totalizan la cantidad de clientes atendidos
+   en el &aacute;rea o por equipo.</p>
+<h6><br /> 2.3.2.13.1.2 Privacidad de Clientes residenciales</h6>
+<p>Los clientes residenciales que reciban asignaci&oacute;n de bloques IPv4 de prefijo /29 o menores (bloques mayores)
+   no est&aacute;n obligados a tener sus datos registrados en la base de datos WHOIS de LACNIC.</p>
+<p>El ISP cuyo cliente residencial reciba asignaci&oacute;n IPv4 de prefijo /29 o menor (bloque mayor) puede optar por
+   registrar la asignaci&oacute;n en la base de datos WHOIS de LACNIC colocando sus propios datos o c&oacute;digo que le
+   sirva de referencia interna. Los datos de contactos administrativos, t&eacute;cnicos y de abuso deben ser los del
+   ISP.</p>
+<p><strong>2.3.2.13.2 Geolocalizaci&oacute;n</strong></p>
+<p>Adem&aacute;s de la informaci&oacute;n disponible en WHOIS, se publicar en un archivo las asignaciones hechas por
+   LACNIC y las subasignaciones realizadas por sus miembros junto con la informaci&oacute;n del pa&iacute;s en que se
+   encuentra asignado el prefijo. El archivo podr&aacute; ser descargado por la comunidad de forma libre. Este archivo
+   podr&aacute; ser empleado entre otras cosas para geolocalizar una IP.</p>
+<p>El formato y lugar de la publicaci&oacute;n ser&aacute; definido por el staff de LACNIC.</p>
+<h4><a name="_Toc45"></a>2.3.2.14.Seguridad y Confidencialidad</h4>
+<p>LACNIC mantendr&aacute; sistemas y pr&aacute;cticas que cuiden y protejan la confidencialidad de toda
+   informaci&oacute;n que a LACNIC le sea entregada en el env&iacute;o de documentaci&oacute;n para la
+   justificaci&oacute;n de la distribuci&oacute;n o asignaci&oacute;n de direcciones IPv4.</p>
+<h4><a name="_Toc46"></a>2.3.2.15.Igualdad en el procesamiento de solicitudes</h4>
+<p>LACNIC tomar&aacute; todas las solicitudes en el orden estricto en el cual estas sean recibidas, sin importar
+   factores geogr&aacute;ficos, demogr&aacute;ficos, idiom&aacute;ticos, etc. LACNIC bajo ninguna circunstancia
+   dar&aacute; trato especial o har&aacute; excepciones al est&aacute;ndar establecido para el procesamiento de
+   solicitudes. Para esto contar&aacute; con un sistema de numeraci&oacute;n de solicitudes que le permita una buena
+   administraci&oacute;n de las mismas.</p>
+<h4><a name="_Toc47"></a>2.3.2.16.Microasignaciones</h4>
+<p>LACNIC har&aacute; microasignaciones de prefijo mayor al est&aacute;ndar (bloque menor) en casos especiales que se
+   enumeran en el punto 2.3.3 "Pol&iacute;ticas para la distribuci&oacute;n de espacio inicial de direcciones IPv4".</p>
+<h4><a name="2.3.2.17"></a>2.3.2.17. Fusiones, adquisiciones, reorganizaciones o reubicaciones</h4>
+<p>Se recuerda que las pol&iacute;ticas de LACNIC no reconocen la venta o transferencia no autorizada de los recursos
+   asignados o distribuidos y considerar&aacute; tales transferencias inv&aacute;lidas, con excepci&oacute;n de las
+   transferencias que se sujeten a la secci&oacute;n 2.3.2.18.</p>
+<p>Sin embargo, LACNIC procesar&aacute; y registrar&aacute; la transferencia de recursos IPv4 como resultado de
+   fusiones, adquisiciones, reorganizaciones o reubicaciones, ya sean parciales o completas, tanto si se trata de
+   recursos de ISPs o usuarios finales.</p>
+<p>Para tramitar dicho cambio y proceder al registro, se deber&aacute; proporcionar documentaci&oacute;n legal que lo
+   respalde a criterio de LACNIC, por ejemplo:</p>
+<ul>
+   <li>Una copia del documento legal que respalda las transferencias de activos.</li>
+   <li>Un inventario detallado de todos los activos utilizados por el solicitante con el cual mantendr&aacute; en uso el
+      espacio el recurso.</li>
+   <li>Una lista de los clientes de la parte solicitante que usa los recursos.</li>
+</ul>
+<p>Se deber&aacute; justificar tambi&eacute;n que sigue manteni&eacute;ndose la necesidad del conjunto de los recursos,
+   oblig&aacute;ndose si fuera el caso, al retorno de los excedentes de los mismos o alternativamente a su transferencia
+   a terceras partes, atendiendo a lo que corresponda seg&uacute;n las pol&iacute;ticas vigentes (2.3.3. y 2.3.4.). En
+   el caso de un retorno, LACNIC determinar&aacute; las condiciones y plazo.</p>
+<h4><a name="2.3.2.18"></a>2.3.2.18. Transferencias de direcciones IPv4</h4>
+<p>Se permitir&aacute;n transferencias de direcciones IPv4 entre LIRs y/o usuarios finales, en adelante entidades, bajo
+   las condiciones establecidas en la presente secci&oacute;n.</p>
+<p>Esta pol&iacute;tica aplica tanto a los casos en que alguna de las entidades involucradas sea de otra regi&oacute;n
+   (transferencias inter-RIR), como para transferencias dentro de la regi&oacute;n LACNIC (transferencias intra-RIR).
+</p>
+<p><a name="2.3.2.18.1"></a></p>
+<p>2.3.2.18.1. El tama&ntilde;o m&iacute;nimo de bloque que se permite transferir es un /24.</p>
+<p>2.3.2.18.2. Para que una entidad dentro de LACNIC, pueda ser el destinatario de una transferencia, debe pasar primero
+   por el proceso de justificaci&oacute;n de recursos IPv4 ante LACNIC. Es decir, la entidad debe justificar ante LACNIC
+   la distribuci&oacute;n/asignaci&oacute;n inicial/adicional, seg&uacute;n sea el caso, de acuerdo a las
+   pol&iacute;ticas vigentes.</p>
+<p>Si el destinatario es una entidad de otra regi&oacute;n, estar&aacute; sujeta a los criterios, verificaciones y
+   requisitos del RIR correspondiente.</p>
+<p>2.3.2.18.3. LACNIC o el RIR correspondiente (en funci&oacute;n de la direcci&oacute;n de la transferencia),
+   verificar&aacute; la titularidad del recurso a transferir y que est&eacute; libre de disputas.</p>
+<p>En los casos de transferencias intra-RIR, ambas entidades deber&aacute;n presentar a LACNIC una copia firmada del
+   documento legal que respalde la transferencia.</p>
+<p>En los casos de transferencias inter-RIR, la documentaci&oacute;n que respalda la operaci&oacute;n ser&aacute; la
+   acordada entre ambos RIR.</p>
+<p>2.3.2.18.4. LACNIC mantendr&aacute; una bit&aacute;cora de transferencias, accesible p&uacute;blicamente, de todas
+   las transferencias de bloques IPv4 que se registren ante &eacute;l. En dicha bit&aacute;cora se registrar&aacute; la
+   fecha de la operaci&oacute;n, la entidad fuente de la transferencia, la entidad destino, las direcciones transferidas
+   y, si fuera una transferencia inter-RIR, los RIRs fuente y destino.</p>
+<p>2.3.2.18.5. La entidad fuente de la transferencia quedar&aacute; autom&aacute;ticamente inelegible para recibir
+   distribuciones y/o asignaciones de recursos IPv4 por parte de LACNIC durante un a&ntilde;o, a partir de la fecha de
+   operaci&oacute;n registrada en la bit&aacute;cora de transferencias.</p>
+<p>2.3.2.18.6. Las direcciones previamente transferidas no podr&aacute;n ser subsecuentemente transferidas (ni total, ni
+   parcialmente) durante un periodo de un a&ntilde;o, a partir de la fecha de operaci&oacute;n registrada en la
+   bit&aacute;cora de transferencias.</p>
+<p>2.3.2.18.7. Una vez concluida la transferencia, LACNIC modificar&aacute; la informaci&oacute;n del recurso
+   transferido para reflejar el cambio de titular.</p>
+<p>2.3.2.18.8. Cada entidad, tanto la que transfiere como la que recibe, quedar&aacute; sujeta a las pol&iacute;ticas y
+   condiciones de membres&iacute;a del RIR correspondiente.</p>
+<p>2.3.2.18.9. Las direcciones provenientes de distribuciones o asignaciones de LACNIC, ya sean iniciales o adicionales,
+   no podr&aacute;n ser sujetos a transferencias (ni totales ni parciales) durante un periodo de tres a&ntilde;os a
+   partir de su fecha de distribuci&oacute;n o asignaci&oacute;n.</p>
+<p>2.3.2.18.10. Los recursos legados transferidos entrantes, dejar&aacute;n de ser considerados legados.</p>
+<h3><a name="_Toc50"></a>2.3.3.Distribuci&oacute;n y asignaci&oacute;n inicial de direcciones IPv4</h3>
+<p>LACNIC distribuir&aacute; direcciones IPv4 a organizaciones que entren en los siguientes casos:</p>
+<ul>
+   <li>Distribuciones a Proveedores de Servicios de Internet</li>
+   <li>Microasignaciones a Infraestructura Cr&iacute;tica</li>
+   <li>Distribuciones Directas a Proveedores de Servicios de Internet.</li>
+   <li>Asignaciones a Usuarios Finales.</li>
+</ul>
+<p>Esta secci&oacute;n describe en detalle las pol&iacute;ticas a aplicar por LACNIC para la distribuci&oacute;n inicial
+   de direcciones IPv4 portables (independiente del proveedor) en cada uno de estos casos.</p>
+<p>Debido a que el n&uacute;mero de direcciones IPv4 disponibles en Internet es limitado, muchos factores deben ser
+   considerados en la determinaci&oacute;n de la distribuci&oacute;n del espacio de direcciones IPv4. Por consiguiente,
+   el espacio de direcciones IPv4 es distribuido a los ISPs siguiendo un modelo de lento inicio. Las distribuciones
+   est&aacute;n basadas en una necesidad justificada actual y no en base a predicciones de n&uacute;mero de clientes,
+   estudios de mercado, etc.</p>
+<h4><a name="_Toc51"></a>2.3.3.1.Distribuci&oacute;n inicial a ISPs</h4>
+<p>El tama&ntilde;o m&iacute;nimo de distribuci&oacute;n inicial aplicado a Proveedores de Servicios de Internet
+   establecido en la regi&oacute;n LACNIC es de un /24.</p>
+<h5><a name="_Toc52"></a>2.3.3.1.1. Requisitos para un prefijo /24 a un /22</h5>
+<p>Para calificar para la distribuci&oacute;n de un prefijo /24 a un /22 el ISP solicitante deber&aacute; cumplir los
+   siguientes requisitos</p>
+<ol>
+   <li>Demostrar el uso o la necesidad inmediata de al menos el 25% del prefijo solicitado.</li>
+   <li>Entregar un plan detallado de uso de 50% de uso del prefijo solicitado para un a&ntilde;o.</li>
+   <li>Si previamente hab&iacute;a un bloque asignado por un proveedor, y se desea mantener el mismo para evitar la
+      renumeraci&oacute;n, y hay acuerdo entre ambas partes, se podr&aacute; ceder<a href="#_ftn1"
+         name="_ftnref1"><sup>[1]</sup></a> dicho bloque (con el cambio de titularidad en el whois, a trav&eacute;s de
+      LACNIC). <br /> <br /> Si se ha justificado espacio adicional y es posible su distribuci&oacute;n, el receptor
+      podr&aacute; decidir si la cesi&oacute;n le es conveniente y recibe un bloque por el espacio adicional o prefiere
+      un &uacute;nico bloque por el total y, por lo tanto, renumera. En caso de renumeraci&oacute;n, el bloque
+      previamente asignado deber&aacute; ser retornado en un plazo m&aacute;ximo de 12 meses. Excepcionalmente, este
+      plazo podr&aacute; ser extendido en 6 meses adicionales si se justifica que no ha habido tiempo para la
+      consecuci&oacute;n de los recursos que precisa y la renumeraci&oacute;n correspondiente.</li>
+   <li>En caso de que el solicitante aun no cuente con un bloque IPv6 asignado por LACNIC, solicitar al mismo tiempo un
+      bloque IPv6 cumpliendo con la pol&iacute;tica aplicable.</li>
+</ol>
+<h5><a name="_Toc53"></a>2.3.3.1.2. Requisitos para un prefijo /21 o menor (bloque de 8 /24 o m&aacute;s)</h5>
+<p>En caso de que el ISP solicitante requiera una distribuci&oacute;n inicial de direcciones IPv4 a partir de un prefijo
+   /21 deber&aacute; cumplir los siguientes requerimientos</p>
+<ul>
+   <li>Proveer informaci&oacute;n de las asignaciones realizadas por prefijos de longitudes /29 o menores (m&aacute;s de
+      8 direcciones IPv4) en el WHOIS de LACNIC</li>
+   <li>Proveer documentaci&oacute;n justificando la distribuci&oacute;n de espacio de direcciones inicial. (Llenado de
+      la plantilla de solicitud de direcciones IPv4 para ISP). Se deber&aacute; incluir informaci&oacute;n detallada
+      mostrando c&oacute;mo ser&aacute; utilizado ese recurso dentro de los periodos de tres, seis y doce meses</li>
+   <li>Si previamente hab&iacute;a un bloque asignado por un proveedor, y se desea mantener el mismo para evitar la
+      renumeraci&oacute;n, y hay acuerdo entre ambas partes, se podr&aacute; ceder<a href="pie"
+         name="_ftnref2"><sup>[2]</sup></a> dicho bloque (con el cambio de titularidad en el whois, a trav&eacute;s de
+      LACNIC).<br /> <br /> Si se ha justificado espacio adicional y es posible su distribuci&oacute;n, el receptor
+      podr&aacute; decidir si la cesi&oacute;n le es conveniente y recibe un bloque por el espacio adicional o prefiere
+      un &uacute;nico bloque por el total y, por lo tanto, renumera. En caso de renumeraci&oacute;n, el bloque
+      previamente asignado deber&aacute; ser retornado en un plazo m&aacute;ximo de 12 meses. Excepcionalmente, este
+      plazo podr&aacute; ser extendido en 6 meses adicionales si se justifica que no ha habido tiempo para la
+      consecuci&oacute;n de los recursos que precisa y la renumeraci&oacute;n correspondiente.</li>
+   <li>En caso de que el solicitante aun no cuente con un bloque IPv6 asignado por LACNIC, solicitar al mismo tiempo un
+      bloque IPv6 cumpliendo con la pol&iacute;tica aplicable.</li>
+</ul>
+<p>Adicionalmente se deber&aacute;n considerar los siguientes requerimientos dependiendo del status multiproveedor o no
+   multiproveedor del ISP solicitante:</p>
+<h6>Si el solicitante es un ISP multiproveedor, pronto a serlo o tiene necesidades de interconexi&oacute;n:</h6>
+<p>Estar utilizando eficientemente un equivalente al 25% del espacio solicitado como m&iacute;nimo (contiguo o no).</p>
+<p>En caso de ser multiproveedor indicar nombre y n&uacute;mero de sistema aut&oacute;nomo de sus proveedores.</p>
+<p>En caso de estar pronto a ser multiproveedor o tener necesidades de interconexi&oacute;n con otros sistemas
+   aut&oacute;nomos describir detalladamente el plan y los plazos (es recomendable presentar contratos o cartas de
+   intenci&oacute;n firmadas).</p>
+<h6>Si el solicitante es un ISP no multiproveedor:</h6>
+<p>Estar utilizado eficientemente un 50% del espacio solicitado como m&iacute;nimo (contiguo o no).</p>
+<h4><a name="_Toc54"></a>2.3.3.2.Microasignaciones a infraestructura cr&iacute;tica</h4>
+<p>Se llaman microasignaciones a aquellas que signifiquen prefijos mayores o iguales a un /22 pero siempre menores o
+   iguales a un /24.</p>
+<p>LACNIC podr&aacute; realizar este tipo de asignaci&oacute;n en casos de proyectos e infraestructuras de redes claves
+   o cr&iacute;ticas para la regi&oacute;n como son IXP (<em>Internet Exchange Point</em>), NAP (<em>Network Access
+      Point</em>), RIR, ccTLD entre otros.</p>
+<p>En el caso de los IXP o NAP para poder solicitar este tipo de asignaci&oacute;n las organizaciones deber&aacute;n</p>
+<p>cumplir los siguientes requisitos:</p>
+<ol>
+   <li>Documentar adecuadamente los siguientes aspectos:</li>
+</ol>
+<p>1.1. Demostrar a trav&eacute;s de sus estatutos su calidad de IXP o NAP. Deber&aacute; poseer al menos tres miembros
+   y una pol&iacute;tica abierta para la asociaci&oacute;n de nuevos miembros.</p>
+<p>1.2. Enviar un diagrama de la estructura de red de la organizaci&oacute;n.</p>
+<p>1.3. Documentar el plan de numeraci&oacute;n a instrumentar.</p>
+<ol start="2">
+   <li>Proveer un plan de utilizaci&oacute;n para los pr&oacute;ximos tres y seis meses. En el resto de las solicitudes
+      se estudiar&aacute;n basados en el an&aacute;lisis de documentaci&oacute;n que justifique los aspectos
+      cr&iacute;ticos y/o claves del proyecto.</li>
+</ol>
+<ol start="3">
+   <li>En caso de que el solicitante aun no cuente con un bloque IPv6 asignado por LACNIC, solicitar al mismo tiempo un
+      bloque IPv6 cumpliendo con la pol&iacute;tica aplicable.</li>
+</ol>
+<p>La organizaci&oacute;n que reciba una microasignaci&oacute;n no podr&aacute; realizar asignaciones con estas
+   direcciones IPv4.</p>
+<h4><a name="2.3.3.3"></a>2.3.3.3.Distribuciones directas a proveedores de servicio de internet</h4>
+<p>LACNIC reconoce que pueden existir circunstancias donde existan necesidades</p>
+<p>&nbsp;justificadas de realizar una distribuci&oacute;n inicial de un /20 o un prefijo menor.</p>
+<p>LACNIC podr&aacute; realizar este tipo de distribuci&oacute;n a aquellas organizaciones que cumplan</p>
+<p>&nbsp;con los siguientes requisitos:</p>
+<ul>
+   <li>Ser organizaci&oacute;n multiproveedor, o ser proveedor de servicios de Internet y demostrar la posibilidad de
+      Interconexi&oacute;n con otros proveedores o puntos de intercambio de tr&aacute;fico (NAP/IXP).</li>
+</ul>
+<ul>
+   <li>Enviar una descripci&oacute;n detallada de la topolog&iacute;a de red.</li>
+</ul>
+<ul>
+   <li>Enviar un portafolio con descripci&oacute;n detallada de los servicios a ofrecer.</li>
+</ul>
+<ul>
+   <li>Enviar un plan detallado del despliegue del uso del direccionamiento a tres, seis y doce meses.</li>
+</ul>
+<ol start="5">
+   <li>En caso de que el solicitante aun no cuente con un bloque IPv6 asignado por LACNIC, solicitar al mismo tiempo un
+      bloque IPv6 cumpliendo con la pol&iacute;tica aplicable.</li>
+</ol>
+<p>LACNIC puede en cualquier momento solicitar para este tipo de distribuciones informaci&oacute;n</p>
+<p>&nbsp;adicional que ayude a la justificaci&oacute;n de un m&iacute;nimo de distribuci&oacute;n.</p>
+<h4><a name="2.3.4"></a>2.3.3.4. Asignaciones a Usuarios Finales</h4>
+<p>LACNIC asignar&aacute; bloques de direcciones IPv4 a usuarios finales que requieren espacio de direcciones IPv4 para
+   su uso interno, para el funcionamiento de sus redes.</p>
+<p>Generalmente los usuarios finales reciben espacio de direcciones IPv4 de sus proveedores inmediatos, no directamente
+   de LACNIC. Las direcciones IPv4 portables (independientes del proveedor) obtenidas directamente de LACNIC u otros
+   Registros Regionales no est&aacute;n garantizadas a ser globalmente ruteables.</p>
+<p>Por esta raz&oacute;n, los usuarios finales deber&iacute;an contactar a sus Proveedores de Servicios de Internet para
+   asegurar su conectividad dentro de la red.</p>
+<p>Los usuarios finales que no est&aacute;n conectados a un ISP y/o planean no estar conectados a Internet se les
+   recomienda usar direcciones IPv4 privadas. Pueden consultar la descripci&oacute;n de tales direcciones IP en el
+   <strong>RFC 1918</strong>.
+</p>
+<h5><a name="_Toc57"></a><em>2.3.3.4.1.</em> Informaci&oacute;n requerida</h5>
+<p>LACNIC solicitar&aacute; la siguiente informaci&oacute;n a todos los usuarios finales que solicitan bloques de
+   direcciones IPv4.</p>
+<ol>
+   <li>Proveer informaci&oacute;n detallada mostrando como el bloque solicitado ser&aacute; utilizado dentro de tres,
+      seis y doce meses</li>
+   <li>Entregar planes de subneteo por al menos un a&ntilde;o, incluyendo m&aacute;scaras de subred y n&uacute;meros de
+      hosts sobre cada subred. El uso de VLSM es requerido.</li>
+   <li>Entregar una descripci&oacute;n detallada de la topolog&iacute;a de la red.</li>
+   <li>Realizar una descripci&oacute;n detallada de los planes de ruteo de la red, incluyendo los protocolos de ruteo a
+      ser usado tambi&eacute;n como cualquier limitaci&oacute;n existente.</li>
+   <li>En caso de que el solicitante aun no cuente con un bloque IPv6 asignado por LACNIC, solicitar al mismo tiempo un
+      bloque IPv6 cumpliendo con la pol&iacute;tica aplicable.</li>
+</ol>
+<h5><a name="_Toc58"></a>2.3.3.4.2. Tasa de utilizaci&oacute;n</h5>
+<p>La tasa de utilizaci&oacute;n es un factor clave a justificar para dimensionar el tama&ntilde;o de la
+   asignaci&oacute;n. La tasa de utilizaci&oacute;n es el porcentaje de direcciones IPv4 que la organizaci&oacute;n
+   utilizar&aacute; en un espacio de tiempo determinado. El adoptado por LACNIC es:</p>
+<p>25% de utilizaci&oacute;n inmediata del bloque solicitado.</p>
+<p>50% de utilizaci&oacute;n a un a&ntilde;o del bloque solicitado.</p>
+<p>Una tasa de utilizaci&oacute;n m&aacute;s grande puede ser requerida basada en requerimientos individuales. Si la
+   organizaci&oacute;n solicitante no cumple con esos par&aacute;metros se le podr&aacute;n retirar las direcciones
+   negociando un tiempo razonable para su renumeraci&oacute;n.&nbsp;</p>
+<h5><a name="_Toc59"></a><em>2.3.3.4.3.</em>Tama&ntilde;o de la asignaci&oacute;n y procedimiento</h5>
+<p>El solicitante debe justificar que anunciar&aacute; el espacio asignado, con su propio sistema aut&oacute;nomo, al
+   menos a otro sistema aut&oacute;nomo.</p>
+<p>El tama&ntilde;o de asignaci&oacute;n m&iacute;nima de direcciones IPv4 para un usuario final es de un bloque con
+   prefijo /24 y el tama&ntilde;o m&aacute;ximo ser&aacute; un /20, el cual deber&aacute; ser justificado, de acuerdo
+   con la tasa de utilizaci&oacute;n (secci&oacute;n 2.3.3.4.2).</p>
+<p>Si previamente hab&iacute;a un bloque asignado por un proveedor, y se desea mantener el mismo para evitar la
+   renumeraci&oacute;n, y hay acuerdo entre ambas partes, se podr&aacute; ceder dicho bloque (con los cambios
+   correspondientes en el whois). Si se ha justificado espacio adicional y es posible su asignaci&oacute;n, el receptor
+   podr&aacute; decidir si la cesi&oacute;n le es conveniente y recibe un bloque por el espacio adicional o prefiere un
+   &uacute;nico bloque por el total y, por lo tanto, renumera. En caso de renumeraci&oacute;n, el bloque previamente
+   asignado deber&aacute; ser retornado en un plazo m&aacute;ximo de 6 meses. Excepcionalmente, este plazo podr&aacute;
+   ser extendido en 6 meses adicionales si se justifica que no ha habido tiempo para la consecuci&oacute;n de los
+   recursos que precisa y la renumeraci&oacute;n correspondiente.</p>
+<p>Para asignaciones adicionales se seguir&aacute;n las pol&iacute;ticas incluidas en la secci&oacute;n 2.3.4 aplicables
+   a los usuarios finales.</p>
+<h3><a name="_Toc60"></a>2.3.4. Pol&iacute;ticas para la distribuci&oacute;n de espacio adicional de direcciones IPv4
+</h3>
+<p>Esta pol&iacute;tica es presentada con el prop&oacute;sito de asistir a los Registros de Internet en el proceso de
+   solicitud de espacio adicional de direcciones IPv4. El factor m&aacute;s importante en la evaluaci&oacute;n de las
+   solicitudes de espacio adicional de direcciones IPv4 es la revisi&oacute;n del espacio actual de direcciones lPv4 de
+   las entidades solicitantes.</p>
+<p>La entidad solicitante debe haber utilizado al menos el 80% de su espacio de direcciones IPv4 de las distribuciones
+   realizadas anteriormente por el RIR o NIR correspondiente con el fin de recibir un espacio adicional. Esto incluye el
+   espacio asignados a sus clientes. Por consiguiente, es importante que los IRs requieran a sus clientes seguir las
+   pr&aacute;cticas de eficiente utilizaci&oacute;n descritas en estas pol&iacute;ticas.</p>
+<p>Para la distribuci&oacute;n de nuevos bloques de direcciones IPv4 los siguientes son los aspectos a cumplir:</p>
+<ol>
+   <li>El primer paso en el proceso es verificar la utilizaci&oacute;n de al menos el 80% de las distribuciones
+      anteriores. Este porcentaje de utilizaci&oacute;n ser&aacute; basado solamente en aquellas redes anunciadas con
+      direcciones IPv4 conectadas a Internet. El m&eacute;todo disponible para mostrar esta utilizaci&oacute;n para
+      aquellos IRs que han asignados direcciones IPv4 a sus clientes, es a trav&eacute;s de los registros en la base de
+      datos WHOIS de LACNIC. Hasta que se verifique el uso de por lo menos el 80% de su bloque previamente distribuido
+      se podr&aacute; seguir considerando su solicitud. El uso del 80% de las direcciones IP distribuidas previamente
+      cubre tambi&eacute;n aquellas direcciones utilizadas para uso interno y clientes dial&minus;up de la
+      compa&ntilde;&iacute;a. Para este &uacute;ltimo caso pueden justificar su utilizaci&oacute;n a trav&eacute;s del
+      reporte del ap&eacute;ndice 3 [<a href="#bookmark">Reporte adicional para la distribuci&oacute;n de espacio de
+         direcciones IPv4</a>]. Organizaciones que realicen asignaciones est&aacute;ticas, podr&aacute;n justificar la
+      utilizaci&oacute;n a trav&eacute;s del reporte del ap&eacute;ndice 4 [<a href="#bookmark1">Reporte de
+         distribuci&oacute;n de recursos IPv4</a>].</li>
+</ol>
+<p>Una vez que se haya verificado al menos el 80% de utilizaci&oacute;n del espacio previamente distribuido, se
+   continuar&aacute; el proceso de solicitud de espacio adicional.</p>
+<ol start="2">
+   <li>Las organizaciones deber&aacute;n demostrar el uso de las pol&iacute;ticas de LACNIC en la asignaci&oacute;n de
+      espacio a sus clientes, en especial en lo referido a:</li>
+</ol>
+<ul>
+   <li>La emisi&oacute;n de prefijos de longitudes m&aacute;s grandes que /24, donde esto sea posible.</li>
+   <li>Verificar que las asignaciones de bloques dentro de la ventana de asignaci&oacute;n fueron enviados para la
+      previa autorizaci&oacute;n de LACNIC.</li>
+</ul>
+<p>3.Las organizaciones deber&aacute;n exigir que sus clientes se adhieran a los siguientes criterios:</p>
+<ul>
+   <li>La informaci&oacute;n de las asignaciones menores a un /29 debe de estar disponible v&iacute;a WHOIS y deben
+      cumplir con el 80% de su espacio utilizado antes de emitirles a sus clientes el espacio adicional.</li>
+   <li>Las pol&iacute;ticas de LACNIC para la comunidad en Internet en general son comunicadas y seguidas por sus
+      clientes.</li>
+</ul>
+<ol start="4">
+   <li>En la revisi&oacute;n de solicitudes para direcciones IPv4 adicionales, LACNIC tambi&eacute;n revisar&aacute; si
+      el espacio designado para devoluci&oacute;n fue realmente devuelto en los tiempos descritos en este documento.
+   </li>
+</ol>
+<ol start="5">
+   <li>Estar al d&iacute;a en el registro de la resoluci&oacute;n inversa del espacio de direcciones IPv4 administrado.
+      El registro</li>
+</ol>
+<p>de la resoluci&oacute;n inversa tambi&eacute;n debe coincidir con el 80% de utilizaci&oacute;n.</p>
+<ol start="6">
+   <li>Para la distribuci&oacute;n de bloques adicionales, LACNIC verificar&aacute; que la organizaci&oacute;n
+      solicitante este al d&iacute;a en sus obligaciones contractuales.</li>
+</ol>
+<ol start="7">
+   <li>El solicitante debe tener al menos un bloque IPv6 asignado por LACNIC o en caso contrario debe solicitar
+      simult&aacute;neamente un bloque inicial IPv6 cumpliendo con la pol&iacute;tica aplicable vigente para tal fin.
+   </li>
+</ol>
+<p>En caso de que el solicitante ya cuente con un bloque IPv6 previamente asignado remitir&aacute; a LACNIC un documento
+   breve que describa sus avances en la integraci&oacute;n del protocolo IPv6.</p>
+<ol start="8">
+   <li>El paso final es determinar la distribuci&oacute;n apropiada a ser emitida. Para poder determinar el
+      tama&ntilde;o de la distribuci&oacute;n a realizar se deber&aacute; proveer informaci&oacute;n detallada mostrando
+      como ser&aacute; utilizado el espacio de direcciones IPv4 dentro de los periodos de tres, seis y doce meses. La
+      pol&iacute;tica del tama&ntilde;o de la distribuci&oacute;n adicional est&aacute; basada en la eficiente
+      utilizaci&oacute;n de espacio dentro de un marco de tiempo de 12 meses.</li>
+</ol>
+<h3><a id="infraestructura-critica"></a>2.3.5. Reserva especial de direcciones IPv4 para infraestructura cr&iacute;tica
+   para la operaci&oacute;n de Internet en la regi&oacute;n.</h3>
+<ol>
+   <li>Esta reserva entrar&aacute; en funcionamiento una vez que haya terminado el espacio de direcciones considerado
+      para la Fase 3 de Agotamiento de IPv4 en la regi&oacute;n.<br /> 2. LACNIC crear&aacute; una reserva equivalente a
+      un /15 de direcciones IPv4 para facilitar el despliegue de infraestructura considerara cr&iacute;tica o esencial
+      para la operaci&oacute;n de Internet en la regi&oacute;n, entendi&eacute;ndose por infraestructura cr&iacute;tica
+      la definici&oacute;n mostrada en el punto 2.3.3.2 del Manual de Pol&iacute;ticas.<br /> 3. La solicitud de
+      direccionamiento para infraestructura cr&iacute;tica puede realizarse en cualquier momento.<br /> 4. La
+      asignaci&oacute;n de direcciones de esta reserva estar&aacute; acotada a los siguientes tama&ntilde;os:<br />
+      asignaci&oacute;n m&iacute;nima: /24<br /> asignaci&oacute;n m&aacute;xima: /22<br /> 5. El tama&ntilde;o de la
+      asignaci&oacute;n estar&aacute; sujeto a la comprobaci&oacute;n de uso y el an&aacute;lisis por LACNIC o el NIR
+      correspondiente.<br /> 6. Las direcciones asignadas bajo este punto deber&aacute;n ser devueltas a LACNIC o al NIR
+      correspondiente una vez que la necesidad original de la solicitud haya terminado.<br /> 7. Las direcciones
+      asignadas a partir de esta reserva no podr&aacute;n ser utilizadas para un prop&oacute;sito distinto del que haya
+      generado la solicitud. La ocurrencia de este evento ocasionar&aacute; la revocaci&oacute;n de la asignaci&oacute;n
+      y la subsecuente devoluci&oacute;n de las direcciones a LACNIC o al NIR correspondiente.</li>
+</ol>
+<p><a id="pie"></a>[1] [2]Como aclaraci&oacute;n, la &ldquo;cesi&oacute;n&rdquo; a efectos operativos de LACNIC, es
+   equivalente a una simplificaci&oacute;n del proceso de transferencias, en el que no se aplica el punto 2.3.2.18.5,
+   que en cualquier caso no se podr&iacute;a aplicar ya que no hay recursos disponibles en LACNIC para los
+   &ldquo;no-nuevos-entrantes&rdquo;.&nbsp;</p>
+
+<h1>3. DISTRIBUCIÓN DE NÚMEROS DE SISTEMA AUTÓNOMO (ASN)
+</h1>
+
+<p>Un Sistema Aut&oacute;nomo (AS) es un grupo de redes de direcciones IP que son gestionadas por uno o m&aacute;s
+   operadores de red que poseen una clara y &uacute;nica pol&iacute;tica de ruteo.</p>
+<p>Cada Sistema Aut&oacute;nomo tiene un n&uacute;mero asociado el cual es usado como un identificador para el Sistema
+   Aut&oacute;nomo en el intercambio de informaci&oacute;n del ruteo externo. Los protocolos de ruteo externos tales
+   como BGP son usados para intercambiar informaci&oacute;n de ruteo entre Sistemas Aut&oacute;nomos.</p>
+<p>La expresi&oacute;n Sistema Aut&oacute;nomo es con frecuencia interpretada incorrectamente como apenas una forma
+   conveniente de agrupar redes que est&aacute;n bajo de una misma gesti&oacute;n. Sin embargo, en el caso en que hay
+   m&aacute;s de una pol&iacute;tica de ruteo en el grupo, m&aacute;s de un AS es necesario. Por otro lado, si el grupo
+   de redes posee la misma pol&iacute;tica que los otros grupos, estos quedan dentro del mismo AS independientemente de
+   la estructura de la gesti&oacute;n. De esta manera, por definici&oacute;n, todas las redes que componen un AS
+   comparten la misma pol&iacute;tica de ruteo.</p>
+<p>Con el objetivo de disminuir la complejidad de las tablas rutas globales, un nuevo N&uacute;mero de Sistema
+   Aut&oacute;nomo (ASN), debe ser asignado solamente en el caso en que una nueva pol&iacute;tica de ruteo es necesaria.
+</p>
+<p>Compartir un mismo ASN entre un grupo de redes que no est&aacute;n bajo de la misma gesti&oacute;n va a requerir una
+   coordinaci&oacute;n adicional entre los administradores de las redes y en algunos casos, va a requerir alg&uacute;n
+   nivel de redise&ntilde;o de la red. Sin embargo, esta es probablemente la &uacute;nica forma de implementar una
+   pol&iacute;tica de ruteo deseada.</p>
+<p>LACNIC distribuir&aacute; N&uacute;meros de Sistema Aut&oacute;nomo a las organizaciones que cumplan con los
+   siguientes requisitos:</p>
+<ol>
+   <li>La organizaci&oacute;n debe tener necesidad de interconexi&oacute;n con otros sistemas aut&oacute;nomos al
+      momento de la solicitud, o tener programada la necesidad de interconexi&oacute;n en menos de 6 meses a partir del
+      momento de la solicitud, luego de cumplido este plazo LACNIC podr&aacute; revocar el ASN asignado en caso el
+      recurso no haya sido utilizado.</li>
+</ol>
+<ol start="2">
+   <li>Detallar la pol&iacute;tica de ruteo de la organizaci&oacute;n solicitante, indicando los ASN con los que se
+      interconectar&aacute;n y las direcciones IP que ser&aacute;n anunciadas a trav&eacute;s del ASN solicitado.</li>
+</ol>
+<p>Es obligaci&oacute;n de la organizaci&oacute;n que reciba un N&uacute;mero de Sistema Aut&oacute;nomo de LACNIC, el
+   mantener las informaciones de direcci&oacute;n postal y puntos de contactos actualizados.</p>
+<p>En el sistema WHOIS de LACNIC es posible representar hasta 3 puntos de contacto distintos que son:</p>
+<p><strong>owner</strong><strong>&minus;</strong><strong>c</strong>, que representa el contacto administrativo de la
+   organizaci&oacute;n a la que el ASN fue asignado;</p>
+<p><strong>routing</strong><strong>&minus;</strong><strong>c</strong>, contacto que puede registrar, a trav&eacute;s del
+   sistema de administraci&oacute;n de IP y ASN, las pol&iacute;ticas de enrutamiento adoptadas por ese Sistema
+   Aut&oacute;nomo;</p>
+<p><strong>abuse</strong><strong>&minus;</strong><strong>c</strong>, contacto de seguridad (<em>Abuse Contact</em>).</p>
+<h2><a name="_Toc63"></a>3.1.Terminolog&iacute;a</h2>
+<p>Los n&uacute;meros de sistemas aut&oacute;nomos de 16 bits fueron definidos en la RFC 1930 y se utilizar&aacute; para
+   su identificaci&oacute;n n&uacute;meros enteros del 0 al 65535. Igualmente, los n&uacute;meros de sistemas
+   aut&oacute;nomos de 32 bits fueron definidos por la RFC 4893 y se utilizara?n para su identificacio?n n&uacute;meros
+   enteros del 0 al 4294967295. Utilizando en ambos casos la representacio?n textual del valor decimal
+   &ldquo;asplain&rdquo; definida en el RFC 5396.<br /> <br /> Consecuentemente, se tomar&aacute; la siguiente
+   terminolog&iacute;a para ASNs de 16 y 32 bits:</p>
+<ul>
+   <li>"N&uacute;meros de AS s&oacute;lo de 16 bits" se refiere a N&uacute;meros de AS en el rango de 0 &ndash; 65535
+   </li>
+   <li>"N&uacute;meros de AS s&oacute;lo de 32 bits" se refiere a N&uacute;meros de AS en el rango de &ndash;65536 -
+      4294967295</li>
+   <li>"N&uacute;meros de AS de 32 bits" se refiere a N&uacute;meros de AS en el rango de 0 &ndash; 4294967295</li>
+</ul>
+<h2><a name="_Toc64"></a>3.2.Etapas de distribuci&oacute;n de AS</h2>
+<p>Existir&aacute;n tres etapas para la distribuci&oacute;n de ASNs por parte de LACNIC:</p>
+<ol>
+   <li>El 1&ordm; de enero de 2007 el registro procesar&aacute; las solicitudes que espec&iacute;ficamente solicitan
+      N&uacute;meros de AS s&oacute;lo de 32 bits y distribuir&aacute; dichos N&uacute;meros de AS seg&uacute;n lo
+      pedido por el solicitante. En ausencia de solicitudes espec&iacute;ficas para obtener un N&uacute;mero de AS
+      s&oacute;lo de 32 bits, el registro distribuir&aacute; un N&uacute;mero de AS s&oacute;lo de 16 bits.</li>
+   <li>El 1&ordm; de enero de 2009 el registro procesar&aacute; las solicitudes que espec&iacute;ficamente solicitan
+      N&uacute;meros de AS s&oacute;lo de 16 bits y distribuir&aacute; dichos N&uacute;meros de AS seg&uacute;n lo
+      pedido por el solicitante. En ausencia de solicitudes espec&iacute;ficas para obtener un N&uacute;mero de AS
+      s&oacute;lo de 16 bits, el registro distribuir&aacute; un N&uacute;mero de AS s&oacute;lo de 32 bits.</li>
+   <li>A partir del 1o de enero de 2010 LACNIC distribuira? N&uacute;?meros de AS solo de 32 bits por omisi&oacute;n. Se
+      asignara?n N&uacute;meros de AS solo de 16 bits, siempre que haya disponibilidad, en respuesta a solicitudes que
+      expl&iacute;citamente, as&iacute; lo pidan y justifiquen debidamente las razones t&eacute;cnicas por las cuales un
+      N&uacute;mero de AS solo de 32 bits no es adecuado para sus necesidades.</li>
+</ol>
+<h2><a name="_Toc65"></a>3.3.Fusiones, adquisiciones, reorganizaciones o reubicaciones</h2>
+<p>Se recuerda que las pol&iacute;ticas de LACNIC no reconocen la venta o transferencia no autorizada de los recursos
+   asignados o distribuidos y considerar&aacute; tales transferencias inv&aacute;lidas.</p>
+<p>Sin embargo, LACNIC procesar&aacute; y registrar&aacute; la transferencia de recursos ASN como resultado de fusiones,
+   adquisiciones, reorganizaciones o reubicaciones, ya sean parciales o completas, tanto si se trata de recursos de ISPs
+   o usuarios finales.</p>
+<p>Para tramitar dicho cambio y proceder al registro, se deber&aacute; proporcionar documentaci&oacute;n legal que lo
+   respalde a criterio de LACNIC, por ejemplo:</p>
+<ul>
+   <li>Una copia del documento legal que respalda las transferencias de activos.</li>
+   <li>Un inventario detallado de todos los activos utilizados por el solicitante con el cual mantendr&aacute; en uso el
+      espacio el recurso.</li>
+   <li>Una lista de los clientes de la parte solicitante que usa los recursos.</li>
+</ul>
+<p>Se deber&aacute; justificar tambi&eacute;n que sigue manteni&eacute;ndose la necesidad del conjunto de los recursos,
+   oblig&aacute;ndose si fuera el caso, al retorno de los excedentes de los mismos o alternativamente a su transferencia
+   a terceras partes, atendiendo a lo que corresponda seg&uacute;n las pol&iacute;ticas vigentes (3.). En el caso de un
+   retorno, LACNIC determinar&aacute; las condiciones y plazo.</p>
+<h2><a name="_Toc66"></a>3.4. Inclusi&oacute;n del ASN originador en el WHOIS cuando estuviera disponible</h2>
+<p>LACNIC deber&aacute; incluir en la informaci&oacute;n del WHOIS el ASN originador de los prefijos consultados,
+   siempre que esta informaci&oacute;n estuviera disponible.</p>
+<p>El ASN originador del bloque en custodia podr&aacute; ser tomado del repositorio de RPKI, tomando como valor el ASN
+   de origen del ROA.</p>
+<p>En las situaciones en las que la informaci&oacute;n de ASN originador de un bloque no estuviera especificada, la
+   respuesta del WHOIS deber&aacute; indicar ese hecho.</p>
+<h1>4. POLÍTICAS PARA LA DISTRIBUCIÓN Y ASIGNACIÓN DE DIRECCIONES IPv6</h1>
+<h2><a name="_Toc68"></a>4.1. Alcance</h2>
+<p>Este cap&iacute;tulo describe pol&iacute;ticas para la distribuci&oacute;n y asignaci&oacute;n del espacio
+   globalmente &uacute;nico de direcciones IPv6.</p>
+<p>[RFC2373, RFC2373bis] designan 2000::/3 a ser el espacio global de direcciones <em>unicast</em> que IANA puede
+   distribuir a los RIRs. Este cap&iacute;tulo trata las distribuciones iniciales y subsiguientes del espacio de
+   direcciones <em>unicast</em> 2000::/3, para los cuales los RIRs formulan pol&iacute;ticas de distribuci&oacute;n y
+   asignaci&oacute;n. Dado que los usuarios finales generalmente recibir&aacute;n asignaciones de /48 [RFC 6177], el
+   &eacute;nfasis particular de este documento es sobre recomendaciones a los LIR/ISPs para las asignaciones a sus
+   usuarios y clientes conectados"</p>
+<h2><a name="_Toc69"></a>4.2.Definiciones</h2>
+<p>Los siguientes t&eacute;rminos son espec&iacute;ficos de las pol&iacute;ticas de distribuci&oacute;n de IPv6.</p>
+<h3><a name="_Toc70"></a>4.2.1.Utilizaci&oacute;n</h3>
+<p>A diferencia de IPv4, IPv6 es generalmente asignado a usuarios finales en cantidades fijas. La utilizaci&oacute;n
+   real de direcciones dentro de cada asignaci&oacute;n ser&aacute; bastante baja comparada con las asignaciones de
+   IPv4. En IPv6, la "utilizaci&oacute;n" es medida en t&eacute;rminos de prefijos asignados a usuarios finales, y no al
+   tama&ntilde;o de los mismos, ni al n&uacute;mero de direcciones realmente utilizadas dentro de dichos prefijos, y
+   as&iacute; deber&aacute; entenderse a lo largo de este documento.</p>
+<h3><a name="_Toc71"></a>4.2.2.HD Ratio</h3>
+<p>El HD Ratio es un modo de medir la eficiencia de asignaci&oacute;n de direcciones [RFC 3194]. Es una
+   adaptaci&oacute;n del HD Ratio, originalmente definido en [RFC 1715], y es expresado de la siguiente manera:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Log (n&uacute;mero de objetos asignados)</p>
+<p>HD = -------------------------------------------</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Log (n&uacute;mero m&aacute;ximo de objetos asignables)</p>
+<p>donde, en el caso de este documento, los objetos son direcciones IPv6 de usuarios (/48s) asignadas desde un prefijo
+   IPv6 de un tama&ntilde;o dado (ver Ap&eacute;ndice 2).</p>
+<h2><a name="_Toc72"></a>4.3.Principios de la pol&iacute;tica IPv6</h2>
+<p>Para cumplir con los objetivos descritos en la secci&oacute;n anterior, las pol&iacute;ticas en este cap&iacute;tulo
+   discuten y siguen los principios b&aacute;sicos descritos debajo.</p>
+<h3><a name="_Toc73"></a>4.3.1.Espacio de direcciones no debe ser considerado propietario</h3>
+<p>Es contrario a los objetivos de este documento y no se encuentra entre los intereses de la comunidad de Internet en
+   su conjunto que los espacios de direcciones sean considerados propietarios.</p>
+<p>Las pol&iacute;ticas en este cap&iacute;tulo se basan en el entendimiento de que el espacio globalmente &uacute;nico
+   de direcciones <em>unicast</em> de IPv6 es licenciado para su uso en lugar de adue&ntilde;ado.
+   Espec&iacute;ficamente, las direcciones IP ser&aacute;n distribuidas y asignadas en base a una licencia, con
+   licencias sujetas a renovaci&oacute;n peri&oacute;dica. La otorgaci&oacute;n de una licencia est&aacute; sujeta a
+   condiciones espec&iacute;ficas a aplicarse al comienzo como as&iacute; tambi&eacute;n en cada renovaci&oacute;n de la
+   misma.</p>
+<p>Los RIRs generalmente renovar&aacute;n las licencias autom&aacute;ticamente, siempre que las organizaciones
+   solicitantes hagan un esfuerzo de buena fe para cumplir con el criterio bajo el cual calificaron o fueron otorgadas
+   una distribuci&oacute;n o asignaci&oacute;n. Sin embargo, en aquellos casos en que una organizaci&oacute;n no
+   est&aacute; utilizando el espacio de direcciones como se espera, o est&aacute; mostrando mala fe en regirse por las
+   obligaciones asociadas, los RIRs se reservan el derecho de no renovar la licencia.</p>
+<p>Notar que cuando una licencia es renovada, la nueva licencia ser&aacute; evaluada y controlada bajo las
+   pol&iacute;ticas de direcciones de IPv6 aplicables en el lugar y momento de la renovaci&oacute;n, las cuales
+   podr&iacute;an diferir de las pol&iacute;ticas bajo las cuales fue originalmente distribuida o cedidas.</p>
+<h3><a name="_Toc74"></a>4.3.2.Distribuci&oacute;n M&iacute;nima</h3>
+<p>Los RIRs aplicar&aacute;n un tama&ntilde;o m&iacute;nimo para distribuciones de IPv6 para facilitar el filtro basado
+   en el prefijo.</p>
+<p>El tama&ntilde;o m&iacute;nimo de distribuci&oacute;n para un espacio de direcciones IPv6 es /32.</p>
+<h3><a name="_Toc75"></a>4.3.3.Consideraciones de la infraestructura de IPv4</h3>
+<p>Cuando un proveedor de servicios de IPv4 pide espacio IPv6 para una transici&oacute;n final de servicios existentes a
+   IPv6, el n&uacute;mero de clientes actuales de IPv4 podr&iacute;a ser usado para justificar un pedido m&aacute;s
+   grande del que estar&iacute;a justificado si el mismo estuviera basado solamente en la infraestructura IPv6.</p>
+<h2><a name="_Toc76"></a>4.4.Pol&iacute;ticas para distribuci&oacute;n y asignaci&oacute;n</h2>
+<h3><a name="_Toc77"></a>4.4.1.Distribuci&oacute;n inicial</h3>
+<h4><a name="_Toc78"></a>4.4.1.1.Distribuciones de direcciones IPv6 a LIR o ISP con distribuciones IPv4 previas
+   realizadas por LACNIC.</h4>
+<p>LACNIC distribuir&aacute;? bloques de direcciones IPv6 a un LIR o ISP que cuente con distribuciones de direcciones
+   IPv4 previamente realizadas por LACNIC. En caso de anunciar la asignaci&oacute;n en el sistema de rutas inter-dominio
+   de Internet, la organizaci&oacute;n receptora deber&aacute;? anunciar el bloque asignado con la m&iacute;nima
+   desagregaci&oacute;n que le sea posible a quien est&aacute; publicando los bloques IP.</p>
+<p>&nbsp;LACNIC realizara? una distribuci&oacute;n de un /32 al recibir una solicitud de direccionamiento IPv6 por parte
+   de un LIR o ISP con distribuciones previas de IPv4. En caso de requerir una distribuci&oacute;n inicial m&aacute;s
+   grande que un /32, el LIR o ISP debera? presentar la documentaci&oacute;n requerida seg&uacute;n el punto 4.5.1.3.
+</p>
+<h4><a name="_Toc79"></a>4.4.1.2.Distribuciones de direcciones IPv6 a LIR o ISP sin distribuciones IPv4 previas
+   realizadas por LACNIC.</h4>
+<p>Para calificar para la distribuci&oacute;n inicial de un espacio de direcciones IPv6, una organizaci&oacute;n debe:
+</p>
+<ul>
+   <li>Ser un LIR o ISP.</li>
+   <li>Documentar un plan detallado sobre los servicios y la conectividad en IPv6 a ofrecer a otras organizaciones
+      (clientes) o a sus propios/relacionados(as) departamentos/entidades/sitios, a los cuales asignar&aacute; /48s.
+   </li>
+</ul>
+<p>Anunciar en el sistema de rutas inter-dominio de Internet el bloque asignado, con la m&iacute;nima
+   desagregaci&oacute;n que le sea posible a quien est&aacute; publicando los bloques IP, en un plazo no mayor a 12
+   meses.</p>
+<ul>
+   <li>Ofrecer servicios en IPv6 a clientes o entidades propias/relacionadas (incluyendo departamentos y/o sitios)
+      localizados f&iacute;sicamente en la regi&oacute;n de LACNIC en un plazo no mayor a 24 meses.</li>
+</ul>
+<h4><a name="_Toc80"></a>4.4.1.3.Tama&ntilde;o de distribuci&oacute;n inicial</h4>
+<p>Las organizaciones podr&iacute;an calificar para una distribuci&oacute;n inicial mayor a /32 entregando
+   documentaci&oacute;n que justifique el pedido.</p>
+<p>En este caso, la distribuci&oacute;n inicial, estar&aacute; basada en el espacio necesario para atender a los
+   clientes, n&uacute;mero de usuarios, extensi&oacute;n de la infraestructura de la organizaci&oacute;n, estructura
+   jer&aacute;rquica y/o geogr&aacute;fica de la organizaci&oacute;n, segmentaci&oacute;n de la infraestructura por
+   razones de seguridad y la longevidad prevista para dicha distribuci&oacute;n inicial.</p>
+<p>El prefijo asignado al ISP debe estar dentro de las "fronteras" binarias de la direcci&oacute;n IPv6 para poder
+   cumplir con las consideraciones mencionadas anteriormente</p>
+<h4><a name="_Toc81"></a>4.4.1.4.Rectificaci&oacute;n del tama&ntilde;o de distribuci&oacute;n inicial</h4>
+<p>Si una organizaci&oacute;n, durante el despliegue de IPv6, aprecia que hay discrepancias en la actualidad respecto de
+   cuando realiz&oacute; la petici&oacute;n de distribuci&oacute;n inicial, referidas a las necesidades del
+   tama&ntilde;o de la misma, podr&aacute; justificar un nuevo plan de direccionamiento a LACNIC, sin necesidad de
+   esperar a cumplir los requisitos de la asignaci&oacute;n subsiguiente, y por tanto no tendr&aacute; que demostrar
+   umbrales de utilizaci&oacute;n, sino el deseo de aplicar un plan de direccionamiento diferente y m&aacute;s apropiado
+   para la realidad del despliegue a realizar.</p>
+<p>El nuevo tama&ntilde;o se ajustar&aacute; al nuevo plan de direccionamiento seg&uacute;n lo indicado en el punto
+   4.5.1.3., y por tanto calificar&aacute; para la ampliaci&oacute;n del prefijo actual en el n&uacute;mero de bits que
+   sea preciso.</p>
+<p>Si no fuera posible entregar esa longitud de prefijo, porque los adyacentes ya est&aacute;n siendo utilizados por
+   otras organizaciones, o bien al hacer esa distribuci&oacute;n no quedara espacio suficiente para sucesivas
+   distribuciones, LACNIC deber&aacute; informar al solicitante y est&eacute; podr&aacute; optar por:</p>
+<ol>
+   <li>a) Recibir un nuevo prefijo con el nuevo tama&ntilde;o solicitado y en un plazo de 6 meses renumerar su red y
+      devolver a LACNIC la distribuci&oacute;n inicial "original".</li>
+   <li>b) Recibir un prefijo complementario para completar dicho plan de direccionamiento, y por tanto anunciar ambos,
+      el prefijo inicial "original" y el nuevo prefijo resultante de la nueva distribuci&oacute;n. A todos los efectos,
+      para subsiguientes distribuciones, se considerar&aacute; el conjunto de ambas distribuciones, como si fuera una
+      sola distribuci&oacute;n.</li>
+</ol>
+<p>Este procedimiento s&oacute;lo podr&aacute; ser utilizado una &uacute;nica vez por cada organizaci&oacute;n,
+   as&iacute; que es preciso, que, en &eacute;sta &ldquo;segunda oportunidad&rdquo;, se estudie con mucho detenimiento
+   el plan de direccionamiento definitivo para la red a medio/largo plazo.</p>
+<h3><a name="_Toc82"></a>4.4.2.Distribuci&oacute;n subsiguiente</h3>
+<p>Las organizaciones que ya tengan una distribuci&oacute;n IPv6 pueden recibir distribuciones subsiguientes de acuerdo
+   a las siguientes pol&iacute;ticas.</p>
+<h4><a name="_Toc83"></a>4.4.2.1.Criterio de distribuci&oacute;n subsiguiente</h4>
+<p>La distribuci&oacute;n subsiguiente ser&aacute; provista cuando una organizaci&oacute;n (ISP/LIR) satisfaga el umbral
+   de evaluaci&oacute;n de utilizaci&oacute;n hist&oacute;rica de direcciones en t&eacute;rminos del n&uacute;mero de
+   usuarios en unidades de asignaciones de /48. El HD Ratio [RFC 3194] es usado para determinar los umbrales de
+   utilizaci&oacute;n que justifican la distribuci&oacute;n de direcciones adicionales como se describe debajo.</p>
+<h4><a name="_Toc84"></a>4.4.2.2.HD Ratio aplicado</h4>
+<p>El valor HD Ratio de 0.94 es adoptado como una aceptable utilizaci&oacute;n de direcciones para justificar la
+   distribuci&oacute;n de espacio de direcci&oacute;n adicional. En el Ap&eacute;ndice 2 se provee una tabla que muestra
+   el n&uacute;mero de asignaciones que son necesarias para lograr un valor aceptable de utilizaci&oacute;n dado el
+   tama&ntilde;o del bloque de direcciones.</p>
+<h4><a name="_Toc85"></a>4.4.2.3.Tama&ntilde;o de la distribuci&oacute;n subsiguiente</h4>
+<p>Cuando una organizaci&oacute;n ha logrado una aceptable utilizaci&oacute;n de su espacio de direcciones distribuido,
+   est&aacute; inmediatamente calificada para obtener una distribuci&oacute;n adicional que resulte en una
+   duplicaci&oacute;n de su espacio de direcciones distribuido. Cuando sea posible, la distribuci&oacute;n ser&aacute;
+   realizada de bloques de direcciones adyacentes, es decir que su distribuci&oacute;n existente es extendida un bit
+   hacia la izquierda.</p>
+<p>Si una organizaci&oacute;n necesita m&aacute;s espacio de direcciones, debe proveer documentaci&oacute;n justificando
+   sus nuevos requerimientos para atender a los clientes, n&uacute;mero de usuarios, extensi&oacute;n de la
+   infraestructura de la organizaci&oacute;n, estructura jer&aacute;rquica y/o geogr&aacute;fica de la
+   organizaci&oacute;n, segmentaci&oacute;n de la infraestructura por razones de seguridad y la longevidad prevista para
+   dicha distribuci&oacute;n subsiguiente.</p>
+<h4><a name="_Toc86"></a>4.4.2.4.Distribuci&oacute;n de LIR a ISP</h4>
+<p>No hay una pol&iacute;tica espec&iacute;fica para la distribuci&oacute;n de espacio de direcciones de una
+   organizaci&oacute;n (LIR) a los ISPs subordinados. Cada LIR podr&iacute;a desarrollar su propia pol&iacute;tica para
+   ISPs subordinados para alentar una utilizaci&oacute;n &oacute;ptima del bloque de direcciones total distribuido al
+   LIR. Sin embargo, todas las asignaciones de /48 a organizaciones Usuarios Finales deben ser registradas por el LIR o
+   por sus ISPs subordinados de modo que el RIR/NIR pueda evaluar apropiadamente el HD Ratio cuando sea necesaria una
+   distribuci&oacute;n subsiguiente.</p>
+<h3><a name="_Toc87"></a>4.4.3.Asignaciones por parte de los ISPs</h3>
+<p>Los LIRs deben realizar asignaciones IPv6 de acuerdo con las siguientes provisiones.</p>
+<h4><a name="_Toc88"></a>4.4.3.1.Asignaci&oacute;n del espacio de direcciones</h4>
+<p>Las asignaciones deben ser realizadas de acuerdo con la necesidad presentada por el usuario del ISP y de acuerdo a
+   las recomendaciones existentes [RIPE-690, https://www.ripe.net/publications/docs/ripe-690], de las cuales destacan
+   las siguientes:</p>
+<p>* Se debe asignar, al usuario o sitio final, un prefijo que sea m&uacute;ltiplo de "n" x /64, suficiente para atender
+   su necesidad actual y planeada, y teniendo en cuenta protocolos existentes y posibilidades de futuro, evitando
+   as&iacute; procesos de renumeraci&oacute;n.</p>
+<p>* La selecci&oacute;n exacta del tama&ntilde;o del prefijo a asignar es una decisi&oacute;n operacional del LIR/ISP,
+   aunque se recomienda una infraestructura m&aacute;s simple y funcional con /48 para todos los extremos de la red.</p>
+<p>* Se recomienda el uso de prefijos persistentes para evitar efectos indeseados.</p>
+<p>* Se recomienda el uso de /64 para los punto-a-punto, con direccionamiento GUA.&nbsp;</p>
+<p>A los RIRs/NIRs no les concierne el tama&ntilde;o de direcciones que los LIRs/ISPs realmente asignan. Por lo tanto,
+   los RIRs/NIRs no pedir&aacute;n informaci&oacute;n detallada sobre redes de usuarios IPv6 como lo hicieron en IPv4,
+   excepto para los casos que se describen en la Secci&oacute;n 4.5.2 y para los prop&oacute;sitos de medir la
+   utilizaci&oacute;n como se define en este cap&iacute;tulo.</p>
+<h4><a name="_Toc89"></a>4.4.3.2.Asignaci&oacute;n a la infraestructura del operador</h4>
+<p>Una organizaci&oacute;n (ISP/LIR) puede asignar un /48 por PoP como un servicio de infraestructura de un operador de
+   servicio IPv6. Cada asignaci&oacute;n a un PoP es considerada como una asignaci&oacute;n sin tener en cuenta el
+   n&uacute;mero de usuarios que usen el PoP. Puede obtenerse una asignaci&oacute;n separada para operaciones propias
+   del operador.</p>
+<h3><a name="_Toc90"></a>4.4.4.Asignaciones directas a Usuarios Finales</h3>
+<p>LACNIC realizar&aacute; asignaciones de direcciones IPv6 portables (independientes del proveedor) directas a usuarios
+   finales seg&uacute;n las dos pol&iacute;ticas detalladas en 4.5.4.1 y 4.5.4.2, dependiendo si la organizaci&oacute;n
+   cuenta o no con asignaciones de direcciones IPv4 portables previamente realizadas por LACNIC.</p>
+<h4><a name="_Toc91"></a>4.4.4.1.Asignaciones directas de direcciones IPv6 portables a Usuarios Finales con asignaciones
+   IPv4 portables previas realizadas por LACNIC.</h4>
+<p>LACNIC asignar&aacute; bloques de direcciones IPv6 portables directamente a Usuarios Finales si cuentan con
+   asignaciones de direcciones IPv4 portables previamente realizadas por LACNIC.</p>
+<p>En caso de anunciar el bloque designado en el sistema de rutas inter-dominio de Internet, la organizaci&oacute;n
+   receptora deber&aacute; anunciar el bloque designado con la m&iacute;nima desagregaci&oacute;n posible para quien
+   est&eacute; publicando los bloques IP.</p>
+<p>Las asignaciones se realizar&aacute;n en bloques siempre mayores o iguales a un /48.</p>
+<p>Sucesivas asignaciones tendr&aacute;n que ser documentadas y justificadas. Adem&aacute;s, siempre que sea posible, se
+   realizar&aacute;n de un bloque de direcciones adyacente (es decir, extendiendo la asignaci&oacute;n existente "n"
+   bits a la izquierda).</p>
+<h4><a name="_Toc92"></a>4.4.4.2.Asignaciones directas de direcciones IPv6 portables a Usuarios Finales sin asignaciones
+   IPv4 portables previas realizadas por LACNIC.</h4>
+<p>LACNIC asignar&aacute; bloques de direcciones IPv6 portables directamente a Usuarios Finales, los cuales
+   deber&aacute;n cumplir con los siguientes requisitos:</p>
+<ol>
+   <li>No ser un LIR o ISP.</li>
+   <li>En caso de anunciar el bloque designado en el sistema de rutas inter-dominio de Internet, la organizaci&oacute;n
+      receptora deber&aacute; anunciar el bloque designado con la m&iacute;nima desagregaci&oacute;n posible para quien
+      est&eacute; publicando los bloques IP.</li>
+   <li>Proveer informaci&oacute;n detallada mostrando como el bloque solicitado ser&aacute; utilizado dentro de tres,
+      seis y doce meses.</li>
+   <li>Entregar planes de direccionamiento por al menos un a&ntilde;</li>
+</ol>
+<p>Las asignaciones se realizar&aacute;n en bloques siempre mayores o iguales a un /48.</p>
+<p>Sucesivas asignaciones tendr&aacute;n que ser documentadas y justificadas. Adem&aacute;s, siempre que sea posible, se
+   realizar&aacute;n de un bloque de direcciones adyacente (es decir, extendiendo la asignaci&oacute;n existente "n"
+   bits a la izquierda).</p>
+<p><strong><em>4.5.4.3 Rectificaci&oacute;n del tama&ntilde;o de la asignaci&oacute;n inicial</em></strong></p>
+<p>Una organizaci&oacute;n que sea Usuario Final podr&aacute; justificar un nuevo plan de direccionamiento ante LACNIC
+   una &uacute;nica vez en caso de que el plan presentado inicialmente y que justific&oacute; la primera
+   asignaci&oacute;n no pueda atender sus necesidades actuales.</p>
+<p>El nuevo prefijo se ajustar&aacute; al nuevo plan y deber&aacute; cumplir con las secciones 4.5.4.1 o 4.5.4.2.</p>
+<p>En caso de que no fuera posible entregar ese tama&ntilde;o de prefijo, ya sea porque los adyacentes ya est&aacute;n
+   siendo utilizados por otras organizaciones o porque al hacer esa asignaci&oacute;n no queda espacio suficiente para
+   otras asignaciones sucesivas, LACNIC deber&aacute; informar al solicitante, quien deber&aacute; optar por:</p>
+<p>- recibir un nuevo bloque con el prefijo solicitado y justificado y que contemple la totalidad de la necesidad
+   presentada, con el compromiso de renumerar su red y devolver a LACNIC el bloque original en un plazo de 6 meses;</p>
+<p>- recibir un nuevo bloque que, sumado al bloque ya asignado, contemple la necesidad presentada y justificada en el
+   nuevo plan y mantener los dos bloques.</p>
+<p>Cada organizaci&oacute;n podr&aacute; utilizar este procedimiento una &uacute;nica vez.</p>
+<h3><a name="_Toc93"></a>4.4.5.Microasignaci&oacute;n en IPv6</h3>
+<p>LACNIC podr&aacute; realizar microasignaciones en casos de proyectos e infraestructuras de redes claves o
+   cr&iacute;ticas para el funcionamiento, y desarrollo de IPv6 en la regi&oacute;n como son IXP (Internet Exchange
+   Point), NAP (Network Access Point), RIR, proveedores de DNS ccTLD, entre otros. Dichas asignaciones se
+   realizar&aacute;n en prefijos mayores o igual a un /32 pero siempre menores o iguales a un /48.</p>
+<p>En el caso de los IXP o NAP para poder solicitar este tipo de asignaciones las organizaciones deber&aacute;n cumplir
+   los siguientes requisitos:</p>
+<ol>
+   <li>Documentar adecuadamente los siguientes aspectos:</li>
+</ol>
+<p>1.1. Demostrar a trav&eacute;s de sus estatutos su calidad de IXP o NAP. Deber&aacute; poseer al menos tres miembros
+   y una pol&iacute;tica abierta para la asociaci&oacute;n de nuevos miembros.</p>
+<p>1.2. Enviar un diagrama de la estructura de red de la organizaci&oacute;n.</p>
+<p>1.3. Documentar el plan de numeraci&oacute;n a instrumentar.</p>
+<ol start="2">
+   <li>Proveer un plan de utilizaci&oacute;n para los pr&oacute;ximos tres y seis meses.</li>
+</ol>
+<p>En el resto de las solicitudes se estudiar&aacute;n basados en el an&aacute;lisis de documentaci&oacute;n que
+   justifique los aspectos cr&iacute;ticos y/o claves del proyecto.</p>
+<p>Todas las microasignaciones se asignar&aacute;n de bloques de direcciones espec&iacute;ficamente reservados para este
+   tipo de asignaciones. LACNIC har&aacute; p&uacute;blica la lista de dichos bloques y las microasignaciones
+   realizadas.</p>
+<h3><a name="_Toc94"></a>4.4.6.Registro de asignaciones</h3>
+<p>Todas las asignaciones de bloques IPv6 de prefijos /48 o menores (bloques mayores) realizadas por los ISPs a los
+   clientes conectados a su red y los usuarios de los servicios prestados deben registrarse en la base de datos WHOIS de
+   LACNIC en un plazo m&iacute;nimo de 7 d&iacute;as a partir de la asignaci&oacute;n.</p>
+<p><br /> La informaci&oacute;n disponible en la base de datos WHOIS tambi&eacute;n ser&aacute; usada por LACNIC cuando
+   analice las solicitudes de bloques IPv4 adicionales realizadas por el ISP.</p>
+<p><br /> La informaci&oacute;n disponible en la base de datos WHOIS ser&aacute; utilizada por LACNIC para calcular el
+   HD Ratio cuando analice las solicitudes de bloques IPv6 adicionales realizadas por el ISP.</p>
+<p><br /> El Registro de asignaciones tambi&eacute;n es necesario por los siguientes motivos:</p>
+<p>. Para asegurarse que el IR finaliz&oacute; o est&aacute; finalizando la distribuci&oacute;n de espacio de
+   direcciones de modo que se justifique la distribuci&oacute;n de un nuevo espacio adicional.<br /> . Para proporcionar
+   informaci&oacute;n a la comunidad Internet sobre cu&aacute;l organizaci&oacute;n est&aacute; usando el espacio de
+   direcciones IPv6 incluyendo a la persona de contacto en caso de problemas de tipo operativo, de seguridad, etc.</p>
+<p>Para el estudio de distribuciones de direcciones IPv6 en la regi&oacute;n.</p>
+<h4><a name="_Toc95"></a>4.4.6.1.Informaci&oacute;n Necesaria</h4>
+<p>Las asignaciones registradas en la base de datos WHOIS de LACNIC deben incluir el nombre de la organizaci&oacute;n,
+   direcci&oacute;n postal, contactos administrativos, t&eacute;cnicos y de abuso con n&uacute;meros de tel&eacute;fono
+   e correos electr&oacute;nicos actualizados.</p>
+<h5><a name="_Toc96"></a><em>4.4.6.1.1.</em>Clientes residenciales</h5>
+<p>Los ISPs que ofrezcan servicios a clientes residenciales pueden registrar en la base de datos WHOIS de LACNIC bloques
+   de direcciones en uso por los equipos o &aacute;reas de atenci&oacute;n al cliente, por servicio.</p>
+<p>La informaci&oacute;n que se registre debe indicar el &aacute;rea de servicio, direcci&oacute;n postal principal del
+   ISP, contactos administrativos, t&eacute;cnicos y de abuso del ISP con n&uacute;meros de tel&eacute;fono y correos
+   electr&oacute;nicos actualizados.</p>
+<p>Las asignaciones deben realizarse por bloques de direcciones que totalizan la cantidad de clientes atendidos en el
+   &aacute;rea o por equipo.</p>
+<h5><a name="_Toc97"></a><em>4.4.6.1.2.</em>Privacidad de Clientes residenciales</h5>
+<p>Los clientes residenciales que reciban asignaci&oacute;n de bloques IPv6 de prefijo /48 o menores (bloques mayores)
+   no est&aacute;n obligados a tener sus datos registrados en la base de datos WHOIS de LACNIC.</p>
+<p><br /> El ISP cuyo cliente residencial reciba asignaci&oacute;n IPv6 de prefijo /48 o<br /> menor (bloque mayor)
+   puede optar por registrar la asignaci&oacute;n en la base de datos WHOIS de LACNIC colocando sus propios datos o
+   c&oacute;digo que le sirva de referencia interna. Los datos de contactos administrativos, t&eacute;cnicos y de abuso
+   deben ser los del ISP.</p>
+<h3><a name="_Toc98"></a>4.4.7.Resoluci&oacute;n inversa</h3>
+<p>Cuando un RIR/NIR asigna espacio de direcciones IPv6 a una organizaci&oacute;n, tambi&eacute;n est&aacute; delegando
+   la responsabilidad de manejar la zona de consulta reversa que corresponde al espacio de direcciones IPv6 asignado.
+   Cada organizaci&oacute;n debe manejar debidamente su zona de consulta reversa. Cuando una organizaci&oacute;n hace
+   una asignaci&oacute;n de direcciones, debe delegar a la organizaci&oacute;n asignada, bajo pedido, la responsabilidad
+   de manejar la zona de consulta reversa que corresponde a las direcciones asignadas.</p>
+<h3><a name="_Toc99"></a>4.4.8.Poseedores de IPv6 ya existentes</h3>
+<p>Las organizaciones que hayan recibido distribuciones de IPv6 /35 bajo la pol&iacute;tica previa de IPv6 [RIRv6
+   Policies] est&aacute;n inmediatamente autorizadas a expandir su distribuci&oacute;n a un prefijo de direcciones /32
+   sin necesidad de justificaci&oacute;n, siempre y cuando satisfagan los criterios de la Secci&oacute;n 4.5.1.1. El
+   prefijo de direcciones /32 contendr&aacute; el prefijo mayor ya distribuido (uno o m&uacute;ltiples prefijos /35 en
+   muchos casos) que ya ha sido reservado por el RIR para una subsecuente distribuci&oacute;n a la organizaci&oacute;n.
+   Las solicitudes de espacio adicional m&aacute;s all&aacute; del m&iacute;nimo tama&ntilde;o /32 ser&aacute;n
+   evaluadas como se discuti&oacute; en otra parte del documento.</p>
+<h2><a name="_Toc100"></a>4.5.IPv6 Fusiones, adquisiciones, reorganizaciones y reubicaciones</h2>
+<p>Se recuerda que las pol&iacute;ticas de LACNIC no reconocen la venta o transferencia no autorizada de los recursos
+   asignados o distribuidos y considerar&aacute; tales transferencias inv&aacute;lidas.</p>
+<p>Sin embargo, LACNIC procesar&aacute; y registrar&aacute; la transferencia de recursos IPv6 como resultado de
+   fusiones, adquisiciones, reorganizaciones o reubicaciones, ya sean parciales o completas, tanto tanto si se trata de
+   recursos de ISPs o usuarios finales.</p>
+<p>Para tramitar dicho cambio y proceder al registro, se deber&aacute; proporcionar documentaci&oacute;n legal que lo
+   respalde a criterio de LACNIC, por ejemplo:</p>
+<ul>
+   <li>Una copia del documento legal que respalda las transferencias de activos.</li>
+   <li>Un inventario detallado de todos los activos utilizados por el solicitante con el cual mantendr&aacute; en uso el
+      espacio el recurso.</li>
+   <li>Una lista de los clientes de la parte solicitante que usa los recursos.</li>
+</ul>
+<p>Se deber&aacute; justificar tambi&eacute;n que sigue manteni&eacute;ndose la necesidad del conjunto de los recursos,
+   oblig&aacute;ndose si fuera el caso, al retorno de los excedentes de los mismos o alternativamente a su transferencia
+   a terceras partes, atendiendo a lo que corresponda seg&uacute;n las pol&iacute;ticas vigentes (4.5.1., 4.5.2., 4.5.3.
+   y 4.5.4.). En el caso de un retorno, LACNIC determinar&aacute; las condiciones y plazo.</p>
+
+<h1>5. DELEGACIÓN DE RESOLUCIÓN INVERSA </h1>
+<h2><a name="_Toc102"></a>5.1.Introducci&oacute;n.</h2>
+<p>En la mayor parte de las conexiones hechas a trav&eacute;s de Internet se utiliza el nombre de las m&aacute;quinas en
+   vez de sus direcciones IP. Por motivos obvios los nombres son m&aacute;s f&aacute;ciles de memorizar que los
+   n&uacute;meros. Sin embargo, las conexiones v&iacute;a Internet entre las computadoras conectadas a esta red
+   ser&aacute;n realizadas utilizando las direcciones IP. Por lo tanto, antes de iniciarse la conexi&oacute;n, se hace
+   una traducci&oacute;n del nombre de la m&aacute;quina a su direcci&oacute;n IP. Este proceso se llama
+   Resoluci&oacute;n DNS directa, o sea, conversi&oacute;n del nombre en direcci&oacute;n IP.</p>
+<p>Muchas veces es necesario tambi&eacute;n hacer la operaci&oacute;n inversa, de donde surge el nombre de
+   Resoluci&oacute;n Inversa.</p>
+<p>En esta conversi&oacute;n, a partir de la direcci&oacute;n IP de un dispositivo, se intenta llegar al nombre asociado
+   a &eacute;ste.</p>
+<p>Para que el proceso de resoluci&oacute;n inversa sea posible es necesario que se utilice un dominio ficticio
+   "in-addr.arpa", una abreviaci&oacute;n para<em> &ldquo;</em><em>Address and Routing Parameter
+      Area</em><em>&rdquo;</em><em>.</em></p>
+<p>La delegaci&oacute;n DNS de este seudo&minus;dominio es responsabilidad de los Registros de Internet, ya que son
+   ellos los responsables por las distribuciones de direcciones IP.</p>
+<h2><a name="_Toc103"></a>5.2.Registro de servidores DNS</h2>
+<p>Todo el espacio de direcciones IP distribuido debe tener un servidor DNS asociado que ser&aacute; responsable por la
+   resoluci&oacute;n inversa. En el caso de la regi&oacute;n de cobertura de LACNIC [anexo 1], esos servidores deben ser
+   registrados en LACNIC, quien a su vez es el responsable de la resoluci&oacute;n inversa de los bloques administrados
+   por esta organizaci&oacute;n.</p>
+<p>LACNIC podr&aacute; utilizar informaci&oacute;n producto de la resoluci&oacute;n inversa como indicador de la
+   utilizaci&oacute;n del bloque de direcciones IP distribuido.</p>
+<p>El registro de los servidores DNS del espacio de direcciones IP administrado por LACNIC, ser&aacute; hecho de forma
+   diferente dependiendo del tama&ntilde;o del espacio distribuido.</p>
+<p>Los prefijos menores o iguales a /16 distribuidos por LACNIC, deber&aacute;n tener registrados en LACNIC los
+   servidores DNS responsables para la resoluci&oacute;n inversa. La informaci&oacute;n ingresada ser&aacute;
+   relacionada a prefijos /16. Las distribuciones subsiguientes de segmentos de prefijos mayores hechas dentro de estos
+   bloques, deber&aacute;n tener los servidores DNS registrados en las organizaciones que recibieron los prefijo menores
+   o iguales a /16 directamente desde LACNIC.</p>
+<p>Los prefijos mayores que /16, distribuidos por LACNIC, deber&aacute;n tener registrados en LACNIC los servidores DNS
+   responsables para la resoluci&oacute;n inversa para todos los prefijos /24 que componen el espacio total de
+   direcciones IP distribuido por LACNIC. De esta forma, las distribuciones subsiguientes de prefijos hasta /24 hechas
+   dentro de ese bloque deber&aacute;n tener los servidores DNS registrados en LACNIC.</p>
+<p><strong>Por ejemplo:</strong></p>
+<ol>
+   <li>El ISP&minus;A recibe de LACNIC un prefijo /15 (200.0.0.0/15). &Eacute;l deber&aacute; informar a LACNIC
+      cu&aacute;les ser&aacute;n los servidores DNS responsables para la resoluci&oacute;n inversa de cada uno de los
+      prefijos /16 que componen el bloque recibido, o sea, los bloques 200.0.0.0/16 y 200.1.0.0/16. Los servidores DNS
+      de distribuciones subsiguientes de prefijos mayores hechas dentro de este bloque, deber&aacute;n ser registrados
+      en los servidores DNS del ISP&minus;A que a su vez est&aacute;n registrados en los servidores DNS de LACNIC como
+      los responsables para la resoluci&oacute;n inversa de los bloques 200.0.0.0/16 y 200.1.0.0/16.</li>
+</ol>
+<ol start="2">
+   <li>El ISP&minus;B recibe de LACNIC un prefijo /20 (200.2.0.0/20). &Eacute;l deber&aacute; informar a LACNIC
+      cu&aacute;les ser&aacute;n los servidores DNS responsables para la resoluci&oacute;n inversa de los bloques del
+      200.2.0.0 hasta el 200.2.15.0.</li>
+</ol>
+<p>Cuando el ISP&minus;B haga una subdistribuci&oacute;n de un bloque con prefijo mayor que /21 y menor o igual a /24,
+   deber&aacute; registrar en los servidores de LACNIC cu&aacute;les son los nuevos servidores de DNS responsables para
+   la resoluci&oacute;n inversa de ese bloque distribuido.</p>
+<p>De esta forma, en el sistema de administraci&oacute;n de direcciones IP de LACNIC no ser&aacute; posible registrar
+   servidores DNS para distribuciones subsiguientes hechas en bloques con prefijo menor o igual a /16 que hayan sido
+   distribuidos directamente por LACNIC. Corresponder&aacute; a la organizaci&oacute;n que recibi&oacute; la
+   distribuci&oacute;n hacer el registro de los servidores DNS responsables para la resoluci&oacute;n inversa de esas
+   distribuciones hechas dentro de ese bloque.</p>
+<p>Esto ser&aacute; tambi&eacute;n reflejado en la base de datos del servidor WHOIS. Es decir, para distribuciones
+   subsiguientes dentro de los bloques de prefijo menor o igual a /16 distribuidos directamente por LACNIC, no
+   ser&aacute; visible v&iacute;a WHOIS cuales son los servidores DNS responsables para la resoluci&oacute;n inversa de
+   esas distribuciones. Esto ocurre porque el registro de estos servidores no es hecho en LACNIC.</p>
+<p>Se recomienda que en caso en que sea necesario identificar los servidores DNS de distribuciones subsiguientes hechas
+   en estos bloques se utilicen herramientas de consulta DNS.</p>
+<p>Esta condici&oacute;n no existe para distribuciones de prefijos mayores que /16 hechas por LACNIC. En este caso las
+   distribuciones subsiguientes de prefijos hasta /24 hechas dentro de los bloques distribuidos por LACNIC y que tengan
+   prefijos mayores que /16 podr&aacute;n tener un servidor DNS delegado v&iacute;a el sistema de administraci&oacute;n
+   de direcciones IP de LACNIC.</p>
+<p>El sistema de administraci&oacute;n de direcciones IP de LACNIC no acepta la delegaci&oacute;n de servidores DNS para
+   bloques con prefijo mayores que /24. Para estos casos se recomienda la adopci&oacute;n de BCP 20.</p>
+<p>Resumiendo:</p>
+<p>Prefijo del bloque distribuido por LACNIC Servidor DNS para distribuciones subsiguientes hechas por LACNIC debe
+   registrarse en:</p>
+<ul>
+   <li>/16 o menor: ISP que recibi&oacute; el bloque.</li>
+   <li>/17 o mayor: LACNIC</li>
+</ul>
+<h1> 6. POLÍTICA DE LAME DELEGATION</h1>
+<p>Se considera que existe un problema de <em>Lame Delegation</em> en un servidor DNS, cuando este servidor aparece
+   registrado en las zonas para la resoluci&oacute;n inversa de los bloques de direcciones IP y al momento de solicitar
+   alguna resoluci&oacute;n este no responde autoritativamente.</p>
+<p>La respuesta no autoritativa de un servidor DNS se interpreta como un error en la configuraci&oacute;n del servidor y
+   dentro de los est&aacute;ndares de LACNIC se considerar&aacute; a este servidor DNS con problemas de <em>Lame
+      Delegation.</em></p>
+<p>El proceso de correcci&oacute;n de las delegaciones lame dentro del espacio de direcciones IP administradas por
+   LACNIC seguir&aacute; las siguientes fases:</p>
+<p>1-Detecci&oacute;n de delegaciones lame.</p>
+<p>2-Monitoreo de los servidores de DNS con problemas de delegaciones lame</p>
+<p>3-Notificaci&oacute;n a los responsables.</p>
+<p>4-Desactivaci&oacute;n de servidores DNS.</p>
+<p>5-Activaci&oacute;n de nuevos servidores de DNS.</p>
+<h2><a name="_Toc105"></a>6.1.Detecci&oacute;n de delegaciones lame</h2>
+<p>LACNIC realizar&aacute; peri&oacute;dicamente revisiones a las zonas in-addr.arpa e ip6.arpa donde existan servidores
+   DNS delegados para la resoluci&oacute;n inversa en la regi&oacute;n de cobertura LACNIC. S&oacute;lo segmentos
+   delegados directamente por LACNIC ser&aacute;n consideradas en los procesos de monitoreo y desactivaci&oacute;n de
+   servidores DNS.</p>
+<p>Se considerar&aacute; que un servidor DNS registrado en el sistema de LACNIC cuenta con problemas de
+   delegaci&oacute;n lame si a una consulta del registro SOA del servidor DNS no se obtiene una respuesta autoritativa
+   de este registro.</p>
+<p>La verificaci&oacute;n ser&aacute; realizada por cada zona in-addr.arpa e ip6.arpa delegada a cada servidor DNS.</p>
+<p>De no tener una respuesta autoritativa el servidor DNS ser&aacute; catalogado con problemas de delegaci&oacute;n lame
+   para la zona in-addr.arpa e ip6.arpa que se verific&oacute;, por lo que entrar&aacute; en un proceso de monitoreo.
+</p>
+<h2><a name="_Toc106"></a>6.2.Monitoreo de los servidores de DNS con problemas de delegaci&oacute;n lame</h2>
+<p>Antes de establecer que un servidor DNS tiene problemas de delegaci&oacute;n lame permanente para una zona
+   in-addr.arpa o ip6.arpa, LACNIC verificar&aacute; por un periodo de 7 d&iacute;as el servidor DNS. Si el problema
+   persiste despu&eacute;s de este periodo LACNIC har&aacute; los esfuerzos para notificar a los contactos responsables
+   del bloque de direcciones IP.</p>
+<p>Si un servidor DNS que fue detectado originalmente con problemas de delegaci&oacute;n lame responde correctamente
+   para la zona in-addr.arpa o ip6.arpa antes de la fase de desactivaci&oacute;n de servidores DNS, saldr&aacute; de la
+   lista de monitoreo, correspondiente a estas zonas.</p>
+<h2><a name="_Toc107"></a>6.3.Notificaci&oacute;n a los Responsables</h2>
+<p>En primera instancia se notificar&aacute; al contacto administrativo del bloque en cuesti&oacute;n, junto con el
+   contacto t&eacute;cnico si es que cuenta con esta informaci&oacute;n. Las notificaciones ser&aacute;n quincenales por
+   un periodo de 60 d&iacute;as. LACNIC se reservar&aacute; el derecho de investigar otro tipo de contactos pasado los
+   primeros 30 d&iacute;as sin respuesta de los contactos administrativos y/o t&eacute;cnico.</p>
+<h2><a name="_Toc108"></a>6.4.Desactivaci&oacute;n de Servidores DNS</h2>
+<p>Una vez pasado el periodo de notificaci&oacute;n definido se proceder&aacute; a la eliminaci&oacute;n de estos
+   servidores DNS dentro de las zonas de LACNIC.</p>
+<p>S&oacute;lo en las zonas in-addr.arpa o ip6.arpa donde el servidor DNS present&oacute; problemas de delegaci&oacute;n
+   lame ser&aacute; dado de baja el servidor. Si existiera otro servidor DNS que d&eacute; servicio a estas zonas no
+   ser&aacute; afectado.</p>
+<p>Se agregar&aacute; un comentario al registro del bloque en la BD WHOIS que se especifique que el servidor DNS
+   registrado para la resoluci&oacute;n inversa de las zonas in-addr.arpa o ip6.arpa correspondiente al segmento fue
+   desactivado por problemas de delegaci&oacute;n lame.</p>
+<p>S&oacute;lo segmentos delegados directamente por LACNIC ser&aacute;n consideradas en los procesos de monitoreo y
+   desactivaci&oacute;n de servidores DNS.</p>
+<h2><a name="_Toc109"></a>6.5.Activaci&oacute;n de nuevos servidores de DNS</h2>
+<p>La activaci&oacute;n de nuevos servidores de DNS seguir&aacute; los procedimientos habituales actuales ya incluidos
+   en la pol&iacute;tica de LACNIC. S&oacute;lo el contacto administrativo o t&eacute;cnico del bloque podr&aacute; dar
+   de alta nuevos servidores DNS a trav&eacute;s del sistema de registro de LACNIC. Todo nuevo servidor DNS que se
+   registre en LACNIC deber&aacute; responder autoritativamente al bloque al momento de su alta de otra manera se
+   rechazar&aacute; el registro del servidor.</p>
+<h1>7. REVOCACIÓN Y DEVOLUCIÓN DE RECURSOS<a href="pie3" name="_ftnref3">[3]</a></h1>
+<p>Las distribuciones y asignaciones de recursos son v&aacute;lidas mientras los objetivos de exclusividad,
+   conservaci&oacute;n, ruteabilidad, informaci&oacute;n y en general, el resto de las pol&iacute;ticas,
+   contin&uacute;en cumpli&eacute;ndose.</p>
+<p>LACNIC podr&aacute;, por lo tanto, invalidar cualquier distribuci&oacute;n o asignaci&oacute;n si se determina que
+   los requerimientos ya no existen o se dejan de cumplir los criterios del manual de pol&iacute;ticas.</p>
+<p>Podr&aacute; ser considerado como causa para la revocaci&oacute;n de recursos:<br /> o Recursos no utilizados o
+   anunciados (cuando sea obligatorio).<br /> o No mantener el registro de la resoluci&oacute;n inversa de las
+   direcciones.<br /> o No mantener actualizada la informaci&oacute;n de las distribuciones y asignaciones en la base de
+   datos Whois de LACNIC o NIRs, seg&uacute;n corresponda.<br /> o Transferencias no autorizadas.<br /> o De forma
+   gen&eacute;rica, incumplimientos continuados y/o reiterados de pol&iacute;ticas.<br /> o No cumplir con las
+   obligaciones contractuales con LACNIC o sus NIRs, incluyendo impagos o fraude documental.<br /> o Organizaciones que
+   desaparecieron, o no responden.</p>
+<p>Cuando el incumplimiento ha sido causado por un tercero, sin conocimiento de la organizaci&oacute;n que recibe los
+   recursos, y sea evidente que no hay connivencia ni negligencia por parte de dicha organizaci&oacute;n, no se
+   iniciar&aacute; el proceso de revocaci&oacute;n.</p>
+<h2><a name="_Toc111"></a>7.1. Proceso de Revocaci&oacute;n de recursos</h2>
+<p>Para la eficiente utilizaci&oacute;n de los recursos de la regi&oacute;n, LACNIC verificar&aacute; con las
+   organizaciones que reciben recursos, el correcto uso de los mismos, de forma automatizada peri&oacute;dicamente
+   cuando sea posible y m&aacute;s exhaustivamente siempre que se cuente con evidencias que permitan inferir que no
+   est&aacute;n siendo correctamente utilizados.</p>
+<p>Una vez se detectan evidencias y son confirmadas, el proceso de recuperaci&oacute;n de recursos tiene los siguientes
+   pasos:</p>
+<ol>
+   <li>a) LACNIC tratar&aacute; de contactar a la organizaci&oacute;n y regularizar la situaci&oacute;n.</li>
+   <li>b) En caso de que la situaci&oacute;n no pueda ser regularizada, LACNIC listar&aacute; p&uacute;blicamente
+      durante un per&iacute;odo m&aacute;ximo de tres meses los recursos a recuperar.</li>
+</ol>
+<p>Durante este periodo la organizaci&oacute;n a&uacute;n puede regularizar la situaci&oacute;n con LACNIC.</p>
+<ol>
+   <li>c) En el resto de los casos, transcurridos los primeros dos meses desde la publicaci&oacute;n de los recursos,
+      LACNIC proceder&aacute; a eliminar los registros NS que apuntan a los servidores autoritativos de los recursos
+      involucrados. Esta informaci&oacute;n puede recuperarse una vez que la organizaci&oacute;n restablece contacto con
+      LACNIC o el NIR correspondiente.</li>
+   <li>d) Habiendo transcurrido tres meses de publicaci&oacute;n sin que la organizaci&oacute;n haya regularizado su
+      situaci&oacute;n, el recurso ser&aacute; recuperado, por lo que se eliminar&aacute;n los registros de titularidad
+      sobre estos recursos en la base de datos de LACNIC.</li>
+   <li>e) Se aplicar&aacute;n el resto de estipulaciones indicadas en el Acuerdo de Servicios de Registro y Estatutos.
+   </li>
+</ol>
+<h2><a name="_Toc112"></a>7.2. Excepcionalidad</h2>
+<p>Para casos en los que la revocaci&oacute;n de recursos involucre infraestructuras esenciales estrat&eacute;gicas para
+   el funcionamiento de Internet en la regi&oacute;n, o para situaciones de excepci&oacute;n como desastres naturales o
+   de inestabilidad pol&iacute;tica, el per&iacute;odo de revocaci&oacute;n de recursos puede ser extendido por parte
+   del Directorio de LACNIC, previa evaluaci&oacute;n del staff a partir de la detecci&oacute;n de una situaci&oacute;n
+   extraordinaria que as&iacute; lo requiera.</p>
+<h2><a name="_Toc113"></a>7.3. Devoluci&oacute;n de recursos</h2>
+<p>Los receptores de recursos pueden devolverlos a LACNIC, siempre que lo deseen, tanto total como parcialmente.</p>
+<p>En el caso de devoluci&oacute;n total, aplicar&aacute; lo indicado en el Acuerdo de Servicios de Registro y
+   Estatutos.</p>
+<h2><a name="_Toc114"></a>7.4. Publicaci&oacute;n de los recursos</h2>
+<p>LACNIC listar&aacute; p&uacute;blicamente los recursos que han sido recuperados o devueltos para que se puedan
+   modificar los filtros de ruteo.</p>
+<h2><a name="_Toc115"></a>7.5. Uso de recursos recuperados o devueltos</h2>
+<p>Los recursos IPv4, ser&aacute;n incorporados al &ldquo;final&rdquo; del pool en vigor en el momento de su
+   recuperaci&oacute;n o devoluci&oacute;n, para su uso en el orden en que se hayan incorporado al mismo.</p>
+<p>Los recursos IPv6 y ASNs, ser&aacute;n incorporados a sus respectivos pools en vigor, al transcurrir 2 a&ntilde;os de
+   su recuperaci&oacute;n o devoluci&oacute;n.</p>
+<p>Sin embargo, LACNIC podr&aacute; utilizar estos recursos de forma diferente, en aplicaci&oacute;n de mejores
+   pr&aacute;cticas, para un cumplimiento optimizado de lo indicado en la secci&oacute;n 2 del RFC7020. Por ejemplo, si
+   se recuperan o devuelven ASN de 16 bits.</p>
+<hr />
+<p><a name="pie3"></a>[3] Se aprueba un esquema escalonado para su implementaci&oacute;n, el cual ser&aacute; dividido
+   en etapas. La identificaci&oacute;n de dichas etapas y la priorizaci&oacute;n son delegadas al staff, siendo
+   necesario evaluar el resultado de la implementaci&oacute;n de cada una de estas etapas previo al avance de la
+   implementaci&oacute;n de etapas posteriores y reporte de los resultados al Directorio.</p>
+<h1> 8. SOLICITUD DE BULK WHOIS DEL REGISTRO DE DIRECCIONES DE INTERNET PARA AMERICA LATINA Y CARIBE</h1>
+
+<p>LACNIC proveera? de una copia bulk de la informaci&oacute;n WHOIS &uacute;nicamente a aquellas organizaciones que
+   destinen la informaci&oacute;n a fines de investigaci&oacute;n t&eacute;cnicas y/u operacionales de Internet. Su
+   solicitud de la informaci&oacute;n y la resoluci&oacute;n de LACNIC denegando o aprobando la misma podra? ser
+   publicada.&nbsp;</p>
+<p>Para solicitar &eacute;sta informaci&oacute;n Ud. debera? completar el <a
+      href="http://www.lacnic.net/innovaportal/file/551/1/bulkwhoisii-sp.pdf">formulario</a> adjuntado a
+   continuaci&oacute;n y enviarlo por correo a la siguiente Direcci&oacute;n:</p>
+<p>LACNIC Atenci&oacute;n: Solicitud de Bulk WHOIS <br /> Rambla Rep&uacute;blica de M&eacute;xico 6125, <br />
+   Montevideo Uruguay, CP 11400&nbsp;</p>
+<p>No se aceptaran formularios enviados por fax, ni solicitudes en las que no se proporcione la informaci&oacute;n que
+   se detalla a continuaci&oacute;n:</p>
+<p>Organizaci&oacute;n solicitante:</p>
+<p>_____________________________________________________________________</p>
+<p>Domicilio de la organizaci&oacute;n:&nbsp;</p>
+<p>_____________________________________________________________________</p>
+<p>Persona de contacto:</p>
+<p>&nbsp;Nombre: _________________________________________________</p>
+<p>&nbsp;Tel&eacute;fono: _________________________________________________</p>
+<p>&nbsp;Fax: _________________________________________________</p>
+<p>&nbsp;Email: _________________________________________________</p>
+<p>Razones de la solicitud y destino de la informaci&oacute;n:&nbsp;</p>
+<p>_____________________________________________________________________</p>
+<h2><a name="_Toc117"></a>8.1.Uso aceptable del Bulk Whois de LACNIC</h2>
+<p>El bulk WHOIS de LACNIC se debera? destinar &uacute;nicamente a fines de investigaci&oacute;n t&eacute;cnicas y/u
+   operacionales de Internet, tales como el dise&ntilde;o o elaboraci&oacute;n de software de seguridad, proyectos de
+   mejora de rendimientos en Internet y optimizaci&oacute;n de tr&aacute;fico en la red. No podra? ser usada con fines
+   de publicidad, mercadeo directo, investigaciones de mercado, y otros prop&oacute;sitos similares. El uso de la
+   informaci&oacute;n del WHOIS de LACNIC con esos fines se encuentra expl&iacute;citamente prohibido, y otorgar&aacute;
+   derecho a suspender al acceso del solicitante a la informaci&oacute;n e iniciar las acciones legales pertinentes.
+   LACNIC solicita que se le notifique de cualquier actividad o sospecha de uso indebido del WHOIS.&nbsp;</p>
+<p>La redistribuci&oacute;n o retransmisi&oacute;n de la informaci&oacute;n por cualquier medio se encuentra
+   expresamente prohibida. En el caso de que se tenga la intenci&oacute;n de publicar todo o parte de la
+   informaci&oacute;n proporcionada, se debera? requerir la autorizaci&oacute;n previa y por escrito de LACNIC.</p>
+<p>La presente solicitud se regira? y sera? interpretada de acuerdo a las leyes de la Rep&uacute;blica Oriental del
+   Uruguay y en caso de producirse diferencias, desavenencias o controversias entre las partes derivadas de este
+   contrato, las mismas procurar&aacute;n solucionarlas mediante la conciliaci&oacute;n del Centro de
+   Conciliaci&oacute;n y Arbitraje de la Bolsa de Comercio del Uruguay, realizada de acuerdo con las disposiciones del
+   Reglamento de Conciliaci&oacute;n de dicho Centro. En caso de que no sea posible conciliar las mismas, dichas
+   diferencias, desavenencias, o controversias ser&aacute;n resueltas definitivamente mediante arbitraje,
+   observ&aacute;ndose para la designaci&oacute;n de los &aacute;rbitros, que ser&aacute;n tres, como para el
+   procedimiento arbitral, las disposiciones contenidas en el Reglamento de Arbitraje del Centro.</p>
+<p>En se&ntilde;al de conformidad con los t&eacute;rminos y condiciones de la presente solicitud, firmo la presente en
+   la fecha que se detalla a continuaci&oacute;n:&nbsp;</p>
+<p>Organizaci&oacute;n:&nbsp;</p>
+<p>_____________________________________________________________________</p>
+<p>Firma:&nbsp;</p>
+<p>_____________________________________________________________________</p>
+<p>Aclaraci&oacute;n:&nbsp;</p>
+<p>_____________________________________________________________________</p>
+<p>Cargo en la Organizaci&oacute;n:&nbsp;</p>
+<p>_____________________________________________________________________</p>
+<p>Fecha: ___ | ___ | _____ (dd | mm | aaaa)</p>
+<h1> 9. POLÍTICAS GLOBALES</h1>
+
+<h2><a name="_Toc119"></a>9.1.POL&Iacute;TICAS DE DISTRIBUCI&Oacute;N DE ESPACIO DE DIRECCIONES IPv4 POR PARTE DE LA
+   IANA A LOS RIRs</h2>
+<p>Este cap&iacute;tulo describe las pol&iacute;ticas que rigen la distribuci&oacute;n de espacio de direcciones IPv4
+   por parte de la IANA a los Registros Regionales de Internet (RIRs). Este cap&iacute;tulo no estipula requisitos de
+   eficiencia respecto de la provisi&oacute;n de servicios por parte de IANA a un RIR de acuerdo con estas
+   pol&iacute;ticas. Estos requisitos deben ser especificados por acuerdos entre los RIRs e ICANN.</p>
+<h3><a name="_Toc120"></a>9.1.1.Principios de distribuci&oacute;n</h3>
+<ul>
+   <li>La IANA distribuir&aacute; a los RIRs espacio de direcciones IPv4 en bloques con prefijo /8.</li>
+   <li>La IANA distribuir&aacute; a los RIRs espacio de direcciones IPv4 suficiente para soportar sus necesidades de
+      registro durante un per&iacute;odo de al menos 18 meses.</li>
+   <li>La IANA permitir&aacute; que los RIRs apliquen sus propias respectivas estrategias de distribuci&oacute;n y
+      reserva a fin de asegurar la eficiencia y eficacia de su labor.</li>
+</ul>
+<h3><a name="_Toc121"></a>9.1.2.Distribuciones iniciales</h3>
+<p>Todo nuevo RIR, en el momento de su reconocimiento, recibir&aacute; un bloque con prefijo /8 distribuido por la IANA.
+   Esta asignaci&oacute;n se har&aacute; independientemente de las cifras de utilizaci&oacute;n proyectadas para el
+   nuevo RIR y ser&aacute; independiente del espacio de direcciones IPv4 que los RIRs ya existentes pudieran haber
+   transferido al nuevo RIR como parte del proceso formal de transici&oacute;n.</p>
+<h3><a name="_Toc122"></a>9.1.3.Distribuciones adicionales</h3>
+<p>Un RIR califica para recibir de IANA espacio de direcciones IPv4 adicional cuando satisface alguna de las condiciones
+   siguientes:</p>
+<ul>
+   <li>El ESPACIO DISPONIBLE de direcciones IPv4 del RIR es menor que el 50% de un bloque con prefijo /8.</li>
+   <li>El ESPACIO DISPONIBLE de direcciones IPv4 del RIR es menor que el ESPACIO NECESARIO establecido para los 9 meses
+      siguientes.</li>
+</ul>
+<p>En ambos casos la IANA har&aacute; una &uacute;nica distribuci&oacute;n de un n&uacute;mero entero de prefijos /8,
+   suficiente para satisfacer el ESPACIO NECESARIO establecido del RIR durante un per&iacute;odo de 18 meses.</p>
+<h4><a name="_Toc123"></a>9.1.3.1.C&aacute;lculo del ESPACIO DISPONIBLE</h4>
+<p>El ESPACIO DISPONIBLE de direcciones IPv4 de un RIR se calcular&aacute; de la siguiente manera:</p>
+<ul>
+   <li>ESPACIO DISPONIBLE = DIRECCIONES LIBRES ACTUALES + RESERVAS QUE VENCER&Aacute;N EN LOS PR&Oacute;XIMOS 3 MESES -
+      ESPACIO FRAGEMENTADO</li>
+   <li>El ESPACIO FRAGMENTADO se calcula como la cantidad total de bloques disponibles menores que el tama&ntilde;o de
+      la distribuci&oacute;n m&iacute;nima del RIR dentro del actual stock de disponibilidades del RIR.</li>
+</ul>
+<h4><a name="_Toc124"></a>9.1.3.2.C&aacute;lculo del ESPACIO NECESARIO</h4>
+<p>Si el Registro Regional de Internet solicitante no establece ninguna situaci&oacute;n especial de necesidades para el
+   per&iacute;odo en cuesti&oacute;n, el ESPACIO NECESARIO se calcular&aacute; de la siguiente manera:</p>
+<ul>
+   <li><strong>ESPACIO NECESARIO = PROMEDIO DE DIRECCIONES DISTRIBUIDAS POR MES EN LOS ULTIMOS 6 MESES *
+         DURACI</strong><strong>&Oacute;</strong><strong>N DEL PER</strong><strong>&Iacute;ODO EN MESES </strong></li>
+</ul>
+<p>Si el RIR solicitante prev&eacute; que debido a ciertas necesidades especiales el ritmo de distribuci&oacute;n en el
+   per&iacute;odo en cuesti&oacute;n ser&aacute; diferente al de los pasados 6 meses, el ESPACIO NECESARIO se
+   podr&aacute; establecer de la siguiente manera:</p>
+<ul>
+   <li>Calcular el ESPACIO NECESARIO como el total de necesidades para dicho per&iacute;odo conforme a su
+      proyecci&oacute;n y en base a los hechos especiales que justifican dichas necesidades.</li>
+   <li>Presentar una justificaci&oacute;n clara y detallada de la proyecci&oacute;n arriba mencionada (punto A).</li>
+</ul>
+<p>Si esta justificaci&oacute;n se basa en la tendencia de distribuciones preparada por el Registro Regional de
+   Internet, se deber&aacute;n adjuntar los datos que expliquen dicha tendencia. <br /> <br /> Si esta
+   justificaci&oacute;n se basa en la aplicaci&oacute;n de una o m&aacute;s nuevas pol&iacute;ticas de
+   distribuci&oacute;n del Registro Regional de Internet, se deber&aacute; adjuntar el an&aacute;lisis de impacto de
+   la/s nueva/s pol&iacute;tica/s. <br /> <br /> Si esta justificaci&oacute;n se basa en factores externos tales como
+   nueva infraestructura, nuevos servicios en la regi&oacute;n, adelantos tecnol&oacute;gicos o aspectos legales, se
+   deber&aacute; adjuntar el an&aacute;lisis correspondiente junto con referencias a fuentes de informaci&oacute;n que
+   permitan corroborar los datos. <br /> <br /> Si la IANA no tuviera elementos que cuestionen claramente la
+   proyecci&oacute;n preparada por el Registro Regional de Internet, la proyecci&oacute;n de necesidades especiales para
+   los siguientes 18 meses, indicada en el punto A anterior, se deber&aacute; considerar v&aacute;lida.</p>
+<h3><a name="_Toc125"></a>9.1.4. Anuncio de las distribuciones de la IANA</h3>
+<p>Cada vez que distribuya espacio de direcciones a un RIR, la IANA enviar&aacute; un anuncio detallado al RIR que
+   recibe dicha distribuci&oacute;n. La IANA tambi&eacute;n enviar&aacute; anuncios a todos los dem&aacute;s RIRs,
+   informando sobre la reciente distribuci&oacute;n. Los RIRs coordinar&aacute;n el anuncio a sus respectivas listas de
+   miembros y a cualquier otra lista que estimen necesario. <br /> <br /> La IANA introducir&aacute; las modificaciones
+   necesarias en la p&aacute;gina "Espacio de Direcciones IPv4" del sitio web de IANA, y puede enviar anuncios a sus
+   propias listas de anuncio. Los anuncios de la IANA se limitar&aacute;n a informar los rangos de direcciones, el
+   momento en el cual se realiz&oacute; la distribuci&oacute;n, y el Registro al cual han sido distribuidos.</p>
+<h2><a name="_Toc126"></a>9.2.POL&Iacute;TICA GLOBAL DE DISTRIBUCI&Oacute;N DEL ESPACIO IPV4 REMANENTE</h2>
+<p>Esta pol&iacute;tica describe el proceso para la distribuci&oacute;n del espacio IPv4 remanente por parte de IANA a
+   los RIR. Cuando se llegue a un volumen m&iacute;nimo de espacio disponible, IANA deber&aacute; distribuir un /8 a
+   cada RIR, reemplazando la actual pol&iacute;tica de distribuci&oacute;n de espacio IPv4.</p>
+<p>Para satisfacer los requisitos de esta pol&iacute;tica, en el momento de su adopci&oacute;n IANA reservar&aacute; un
+   /8 para cada RIR. Las unidades de distribuci&oacute;n reservadas dejar&aacute;n de formar parte del espacio de
+   direcciones disponible en IANA. IANA tambi&eacute;n deber&aacute; reservar un /8 para cualquier nuevo RIR en el
+   momento de su reconocimiento.</p>
+<p>El proceso para la distribuci&oacute;n del espacio IPv4 remanente se divide en dos fases consecutivas:</p>
+<h3><a name="_Toc127"></a>9.2.1.Fase de aplicaci&oacute;n de la pol&iacute;tica existente</h3>
+<p>Durante esta fase IANA continuar&aacute; distribuyendo direcciones IPv4 a los RIR utilizando la pol&iacute;tica de
+   distribuci&oacute;n existente. Esta fase continuar&aacute; hasta que una solicitud de espacio de direcciones IPv4
+   presentada a IANA por alguno de los RIR no pueda ser satisfecha con el espacio IPv4 remanente en IANA o bien pueda
+   ser satisfecha pero dejando a IANA sin espacio de direcciones.</p>
+<p>Esta ser&aacute; la &uacute;ltima solicitud de espacio de direcciones IPv4 que IANA aceptar&aacute; de parte de
+   cualquier RIR. En este momento se activar&aacute; la siguiente fase del proceso.</p>
+<h3><a name="_Toc128"></a>9.2.2.Fase de agotamiento</h3>
+<p>IANA autom&aacute;ticamente distribuir&aacute; a cada RIR las unidades de distribuci&oacute;n IPv4 reservadas (un /8
+   a cada uno de ellos) y responder&aacute; a la &uacute;ltima solicitud con las restantes unidades de
+   distribuci&oacute;n disponibles en IANA (M unidades).</p>
+<h3><a name="_Toc129"></a>9.2.3.Tama&ntilde;o de las distribuciones IPv4 finales</h3>
+<p>Durante esta fase IANA autom&aacute;ticamente distribuir&aacute; a cada RIR un /8 del espacio reservado definido en
+   la presente pol&iacute;tica. IANA tambi&eacute;n distribuir&aacute; M unidades de distribuci&oacute;n al RIR que
+   present&oacute; la &uacute;ltima solicitud de direcciones IPv4.</p>
+<h3><a name="_Toc130"></a>9.2.4.Distribuci&oacute;n del espacio de direcciones IPv4 remanente</h3>
+<p>Una vez completada la evaluaci&oacute;n de la &uacute;ltima solicitud de direcciones IPv4, IANA DEBER&Aacute;:</p>
+<ol>
+   <li>Comunicar inmediatamente a la NRO la activaci&oacute;n de la segunda fase de la presente pol&iacute;tica.</li>
+   <li>Proceder a distribuir M unidades de distribuci&oacute;n al RIR que present&oacute; la &uacute;ltima solicitud de
+      espacio de direcciones IPv4.</li>
+   <li>Proceder a distribuir a cada RIR un /8 del espacio reservado.</li>
+</ol>
+<h2><a name="_Toc131"></a>9.3.POL&Iacute;TICA DE DISTRIBUCI&Oacute;N DE ESPACIO DE DIRECCIONES IPv6 DEL IANA A LOS
+   REGISTROS REGIONALES DE INTERNET (RIRs)</h2>
+<p>Este cap&iacute;tulo describe la pol&iacute;tica que rige las distribuciones de espacio de direcciones IPv6 del IANA
+   a los Registros Regionales de Internet (RIR). Este cap&iacute;tulo no estipula los requerimientos de desempe&ntilde;o
+   en la provisi&oacute;n de servicios del IANA a un RIR de acuerdo con esta pol&iacute;tica. Tales requerimientos
+   ser&aacute;n especificados por un acuerdo apropiado entre el ICANN y el NRO.</p>
+<h3><a name="_Toc132"></a>9.3.1.Principios de distribuci&oacute;n</h3>
+<ul>
+   <li>La unidad de distribuci&oacute;n IPv6, (por consiguiente, la distribuci&oacute;n m&iacute;nima de IPv6) del IANA
+      a un RIR es un /12</li>
+   <li>El IANA distribuir&aacute; espacio IPv6 suficiente a los RIRs para soportar sus necesidades de registro por al
+      menos un periodo de 18 meses.</li>
+   <li>El IANA permitir&aacute; a los RIRs aplicar sus propias estrategias de distribuci&oacute;n y reserva con el fin
+      de asegurar la eficiencia y eficacia de sus trabajos</li>
+</ul>
+<h3><a name="_Toc133"></a>9.3.2.Distribuciones Iniciales</h3>
+<p>En el inicio de esta pol&iacute;tica cada RIR existente con menos de un /12 de espacio de direcciones sin distribuir,
+   recibir&aacute; una distribuci&oacute;n de IPv6 del IANA.</p>
+<p>Cualquier nuevo RIR, al ser reconocido por ICANN, recibir&aacute; una distribuci&oacute;n IPv6 del IANA.</p>
+<h3><a name="_Toc134"></a>9.3.3.Distribuciones Adicionales</h3>
+<p>Un RIR es elegible a recibir espacio de direcciones IPv6 adicional del IANA cuando unas de las siguientes condiciones
+   se cumplan.</p>
+<ul>
+   <li>El ESPACIO DISPONIBLE de direcciones IPv6 del RIR es menos del 50% de un /12.</li>
+   <li>El ESPACIO DISPONIBLE de direcciones IPv6 es menos que su ESPACIO NECESARIO establecido por los siguientes 9
+      meses.</li>
+</ul>
+<p>En cada caso el IANA har&aacute; una &uacute;nica distribuci&oacute;n de IPv6, suficiente para satisfacer el ESPACIO
+   NECESARIO establecido para el RIR para un periodo de 18 meses.</p>
+<h4><a name="_Toc135"></a>9.3.3.1.C&aacute;lculo de ESPACIO DISPONIBLE</h4>
+<p>El ESPACIO DISPONIBLE de direcciones IPv6 de un RIR ser&aacute; determinado como sigue:</p>
+<p><strong>ESPACIO DISPONIBLE = DIRECCIONES LIBRES + RESERVACIONES HA EXPIRAR DURANTE LOS SIGUIENTES 3 MESES
+   </strong><strong>&ndash; </strong><strong>ESPACIO FRAGMENTADO</strong></p>
+<p>El ESPACIO FRAGMENTADO es determinado como la cantidad total de bloques disponibles m&aacute;s peque&ntilde;os que el
+   tama&ntilde;o m&iacute;nimo de distribuci&oacute;n del RIR dentro de su espacio disponible total en existencia del
+   RIR.</p>
+<h4><a name="_Toc136"></a>9.3.3.2.C&aacute;lculo del ESPACIO NECESARIO</h4>
+<p>Si el RIR solicitante no establece una necesidad especial para el periodo en cuesti&oacute;n, el ESPACIO NECESARIO
+   ser&aacute; determinado como sigue:</p>
+<p><strong>ESPACIO NECESARIO = PROMEDIO DE DIRECCIONES ASIGNADOS MENSUALMENTE DURANTE LOS ULTIMOS 6 MESES * LONGITUD DEL
+      PERIODO EN MESES</strong></p>
+<p>Si el RIR solicitante anticipa que debido a ciertas necesidades especiales la proporci&oacute;n de la
+   distribuci&oacute;n para el periodo en cuesti&oacute;n ser&aacute; diferente de los 6 meses anteriores, puede
+   entonces determinar su ESPACIO NECESARIO como sigue:</p>
+<p>Calcular el ESPACIO NECESARIO como sus necesidades totales para ese periodo de acuerdo a su proyecci&oacute;n y
+   basado en hechos especiales que justifiquen esas necesidades.</p>
+<p>Entregar una justificaci&oacute;n detallada y clara de la proyecci&oacute;n mencionado anteriormente.</p>
+<p>Si la justificaci&oacute;n es basada en la tendencia de distribuciones preparado por el RIR, debe incluirse los datos
+   que expliquen dicha tendencia.</p>
+<p>Si la justificaci&oacute;n es basada en la aplicaci&oacute;n de una o m&aacute;s nuevas pol&iacute;ticas de
+   distribuci&oacute;n del RIR, debe incluirse un an&aacute;lisis de impacto de tales nuevas pol&iacute;ticas.</p>
+<p>Si la justificaci&oacute;n es basada en factores externos tales como nueva infraestructura, nuevos servicios dentro
+   la regi&oacute;n, avances tecnol&oacute;gicos o aspectos legales, debe incluirse el an&aacute;lisis correspondiente
+   junto con referencias a fuentes de informaci&oacute;n que permitan verificar los datos.</p>
+<h3><a name="_Toc137"></a>9.3.4.Anuncios de las distribuciones del IANA</h3>
+<p>El IANA, el NRO, y los RIRs har&aacute;n anuncios y actualizar&aacute;n sus respectivos <em>websites</em> en
+   relaci&oacute;n a la distribuci&oacute;n hecho por el IANA a un RIR. El ICANN y el NRO establecer&aacute;n
+   procedimientos administrativos para manejar este proceso.</p>
+<h2><a name="_Toc138"></a>9.4.POL&Iacute;TICA GLOBAL DE DISTRIBUCI&Oacute;N DE ASNS A LOS REGISTROS REGIONALES DE
+   INTERNET</h2>
+<p>Este documento describe la pol&iacute;tica que rige la distribuci&oacute;n de N&uacute;meros de Sistema
+   Aut&oacute;nomo (ASNs) por parte de IANA a los Registros Regionales de Internet (RIRs).</p>
+<p>Este documento no estipula requisitos de performance en la provisi&oacute;n de servicios por parte de IANA a un RIR.
+   Tales requisitos deber&aacute;n ser especificados mediante un acuerdo apropiado entre el ICANN y la NRO <em>(Number
+      Resource Organization).</em></p>
+<h3><a name="_Toc139"></a>9.4.1.Principios de las Distribuciones</h3>
+<p>IANA distribuye ASNs a los RIRs en bloques de 1024 ASNs. En este documento, el t&eacute;rmino &ldquo;bloque de
+   ASNs&rdquo; se refiere a un conjunto de 1024 ASNs. Hasta el 31 de diciembre de 2009, las distribuciones de bloques de
+   ASNs de s&oacute;lo 2 bytes y de s&oacute;lo 4 bytes se har&aacute;n en forma separada e independiente. Esto
+   significa que, de acuerdo con esta pol&iacute;tica, hasta el 31 de diciembre de 2009 los RIRs pueden recibir de IANA
+   dos bloques de ASNs diferentes, uno para ASNs de s&oacute;lo 2 bytes y otro para ASNs de s&oacute;lo 4 bytes.
+   Despu&eacute;s de esta fecha IANA y los RIRs dejar&aacute;n de diferenciar entre ASNs de s&oacute;lo 2 bytes y ASNs
+   de s&oacute;lo 4 bytes, y distribuir&aacute;n ASNs de un espacio de distribuci&oacute;n no diferenciado de 4 bytes
+</p>
+<h3><a name="_Toc140"></a>9.4.2.Distribuciones Iniciales</h3>
+<p>A cada nuevo RIR se le distribuir&aacute; un nuevo bloque de ASNs.</p>
+<h3><a name="_Toc141"></a>9.4.3.Distribuciones Adicionales</h3>
+<p>Un RIR podr&aacute; recibir de IANA uno o m&aacute;s bloques de ASNs adicionales si se satisface una de las
+   condiciones siguientes:</p>
+<ul>
+   <li>El RIR ha asignado 80% del bloque de ASNs recibido previamente, o.</li>
+   <li>El n&uacute;mero de ASNs libres actualmente en poder del RIR es menor que la necesidad proyectada para 2 meses.
+      La proyecci&oacute;n se basa en el n&uacute;mero promedio de ASNs asignados por el RIR durante los 6 meses
+      precedentes.</li>
+</ul>
+<p>A un RIR se le distribuir&aacute;n tantos bloques de ASNs como sea necesario para soportar sus necesidades de
+   registraci&oacute;n durante los doce meses siguientes, en base a su tasa de asignaci&oacute;n promedio durante los
+   seis meses precedentes, a menos que el RIR espec&iacute;ficamente solicite una cantidad de bloques menor que aquella
+   para la cual califica.</p>
+<h3><a name="_Toc142"></a>9.4.4.Anuncio de las Distribuciones por parte de IANA</h3>
+<p>El IANA, la NRO y los RIRs deber&aacute;n anunciar y actualizar sus respectivos sitios web / bases de datos cuando la
+   IANA realice una distribuci&oacute;n a un RIR. El ICANN y la NRO deber&aacute;n establecer procedimientos
+   administrativos para manejar este proceso.</p>
+<h2><a name="_Toc143"></a>9.5.POL&Iacute;TICA GLOBAL PARA LA DISTRIBUCI&Oacute;N DE ESPACIO DE DIRECCIONES IPV4 POR
+   PARTE DE LA IANA POST AGOTAMIENTO</h2>
+<p>Tras la adopci&oacute;n de esta pol&iacute;tica para direcciones IPv4 por parte del Directorio de ICANN, la IANA
+   establecer&aacute; un Pool de Direcciones IPv4 Recuperadas para ser utilizado luego del agotamiento del espacio de
+   direcciones IPv4 de los RIR tal como se define en la Secci&oacute;n 1. El Pool de Direcciones IPv4 Recuperadas
+   inicialmente contendr&aacute; cualquier fragmento que pudiera haber quedado en el inventario de la IANA.
+   Tambi&eacute;n contendr&aacute; cualquier espacio devuelto a la IANA por cualquier otro medio.</p>
+<h3><a name="_Toc144"></a>9.5.1.Pool de Direcciones IPv4 Recuperadas</h3>
+<p>El Pool de Direcciones IPv4 Recuperadas ser&aacute; administrado por la IANA. &Eacute;ste contendr&aacute;:</p>
+<ol>
+   <li>Cualquier fragmento que pudiera haber quedado en el inventario de la IANA despu&eacute;s que los &uacute;ltimos
+      /8 del espacio de direcciones IPv4 sea delegado a los RIR</li>
+</ol>
+<p>- El inventario de la IANA excluye las "direcciones IPv4 para usos especiales" seg&uacute;n se define en BCP 153 y
+   cualquier direcci&oacute;n distribuida por la IANA para uso experimental.</p>
+<ol>
+   <li>Cualquier espacio de direcciones IPv4 devuelto a la IANA por cualquier medio.</li>
+</ol>
+<p>El Pool de Direcciones IPv4 Recuperadas permanecer&aacute; inactivo hasta que el primer RIR tenga menos de un total
+   de un /9 en su inventario de espacio de direcciones IPv4.</p>
+<p>Cuando uno de los RIR declare tener menos de un total de un /9 en su inventario, el Pool de Direcciones IPv4
+   Recuperadas ser&aacute; declarado activo y las direcciones de dicho Pool de Direcciones IPv4 Recuperadas ser&aacute;
+   distribuido de acuerdo con lo especificado en la Secci&oacute;n 9.5.2 a continuaci&oacute;n.</p>
+<h3><a name="_Toc145"></a>9.5.2.Distribuci&oacute;n por parte de la IANA del espacio de direcciones IPv4 devuelto</h3>
+<ol>
+   <li>La IANA podr&aacute; comenzar a realizar distribuciones una vez que el pool se declare activo.</li>
+</ol>
+<ol>
+   <li>En cada "per&iacute;odo de distribuci&oacute;n de espacio IPv4" cada RIR recibir&aacute; de la IANA una
+      &uacute;nica "unidad de distribuci&oacute;n IPv4".</li>
+</ol>
+<ol>
+   <li>Un "per&iacute;odo de distribuci&oacute;n de espacio IPv4" se define como un per&iacute;odo de seis meses que
+      comienza el 1ro de marzo o el 1ro de setiembre de cada a&ntilde;o.</li>
+</ol>
+<ol>
+   <li>La IANA calcular&aacute; el tama&ntilde;o de la "unidad de distribuci&oacute;n IPv4" en los siguientes momentos:
+   </li>
+</ol>
+<p>- Cuando el Pool de Direcciones IPv4 Recuperadas se active por primera vez</p>
+<p>- Al comenzar cada per&iacute;odo de distribuci&oacute;n de espacio IPv4</p>
+<p>En estos momentos, para calcular la "unidad de distribuci&oacute;n IPv4" la IANA usar&aacute; la siguiente
+   f&oacute;rmula:</p>
+<p>Unidad de distribuci&oacute;n IPv4 = 1/5 del Pool de Direcciones IPv4 Recuperadas, redondeado hacia abajo al
+   l&iacute;mite CIDR (potencia de 2) siguiente.</p>
+<p>Ning&uacute;n RIR podr&aacute; obtener m&aacute;s que este c&aacute;lculo usado para determinar la unidad de
+   distribuci&oacute;n IPv4, aun cuando puedan justificar su necesidad.</p>
+<p>El tama&ntilde;o m&iacute;nimo de la "unidad de distribuci&oacute;n IPv4" ser&aacute; un /24. Si el c&aacute;lculo
+   usado para determinar la unidad de distribuci&oacute;n IPv4 da por resultado un bloque menor a un /24, durante dicho
+   per&iacute;odo de distribuci&oacute;n de espacio IPv4 la IANA no distribuir&aacute; ninguna direcci&oacute;n.</p>
+<h3><a name="_Toc146"></a>9.5.3.Informes</h3>
+<p>La IANA podr&aacute; publicar anuncios de las transacciones de direcciones IPv4 que se produzcan de acuerdo con esta
+   pol&iacute;tica. La IANA har&aacute; las modificaciones necesarias en la p&aacute;gina "Espacio de direcciones
+   Protocolo Internet v4" de su sitio web [2] y podr&aacute; realizar anuncios a trav&eacute;s de sus propias listas de
+   anuncios. Los anuncios de la IANA se limitar&aacute;n a indicar los rangos de direcciones distribuidos, el momento de
+   la distribuci&oacute;n y cu&aacute;l Registro recibi&oacute; la distribuci&oacute;n.</p>
+<h1>10. POLÍTICA DE DISTRIBUCIÓN DE RECURSOS DE INTERNET CON FINES DE INVESTIGACIÓN Y EXPERIMENTACIÓN</h1>
+
+<p>LACNIC realizar&aacute; distribuciones experimentales con el objetivo de fomentar la investigaci&oacute;n y
+   desarrollo en la regi&oacute;n. Estas distribuciones abarcar&aacute;n todos los recursos que LACNIC posee
+   (direcciones IPv4, IPv6, ASN).</p>
+<p>LACNIC fomentar&aacute; el uso de recursos privados (cuando sea posible), tanto para direcciones IPv4 (RFC 1918),
+   como para ASN (64512 -65535).</p>
+<p>Para poder recibir una distribuci&oacute;n inicial, el experimento deber&aacute; cumplir con una de las siguientes
+   condiciones:</p>
+<ul>
+   <li>Estar basado en un RFC de la IETF con categor&iacute;a experimental.</li>
+   <li>Ser considerado por parte de LACNIC y especialistas externos en el tema como favorable para el desarrollo de la
+      regi&oacute;n y la tecnolog&iacute;a en general.</li>
+</ul>
+<p>Para poder obtener una distribuci&oacute;n experimental, el solicitante deber&aacute;:</p>
+<ul>
+   <li>Enviar inicialmente toda la informaci&oacute;n del experimento que LACNIC y los especialistas externos en el tema
+      considere necesaria de forma de evaluar la solicitud. LACNIC publicar&aacute; la informaci&oacute;n referente a la
+      solicitud en una p&aacute;gina Web p&uacute;blica (a definir por LACNIC) y anunciar&aacute; la existencia de la
+      solicitud a trav&eacute;s de una lista de correo de suscripci&oacute;n abierta (a definir por LACNIC). LACNIC
+      esperar&aacute; un plazo de 30 d&iacute;as antes de realizar la distribuci&oacute;n para recibir comentarios de la
+      comunidad.</li>
+   <li>Utilizar s&oacute;lo los recursos distribuidos para los fines detallados en la informaci&oacute;n remitida a
+      LACNIC.</li>
+   <li>No utilizar la distribuci&oacute;n con fines comerciales.</li>
+   <li>Los resultados del experimento deben estar en una p&aacute;gina Web p&uacute;blicamente accesible (sin controles
+      de acceso). Existir&aacute; un enlace desde la p&aacute;gina de LACNIC.</li>
+   <li>Presentar un informe anual a LACNIC sobre el avance del experimento. Los informes podr&aacute;n ser difundidos
+      por LACNIC en sus foros, listas de correos, website y cualquier otra forma de difusi&oacute;n que entienda
+      pertinente, respetando la fuente del mismo.</li>
+   <li>Ingresar la informaci&oacute;n de redistribuci&oacute;n en la base de datos WHOIS de LACNIC.</li>
+   <li>Mantener al d&iacute;a la resoluci&oacute;n inversa de los bloques distribuidos.</li>
+   <li>El no cumplimiento de estas condiciones puede acarrear la revocaci&oacute;n de la distribuci&oacute;n
+      correspondiente.</li>
+</ul>
+<p>Los bloques m&iacute;nimos de distribuci&oacute;n estar&aacute;n restringidos por las pol&iacute;ticas de
+   microasignaciones (tanto para IPv4 como para IPv6).</p>
+<p>Si bien no existe un tama&ntilde;o m&aacute;ximo de distribuci&oacute;n, LACNIC deber&aacute; asignar recursos de
+   forma de asegurar su operaci&oacute;n normal.</p>
+<p>En el estudio inicial el staff de LACNIC determinar&aacute; los recursos a asignar.</p>
+<p>La distribuci&oacute;n experimental tendr&aacute; una duraci&oacute;n de un a&ntilde;o renovable sucesivamente por
+   igual per&iacute;odo, sin un m&aacute;ximo estipulado. Para la renovaci&oacute;n se considerar&aacute; el informe
+   anual presentado.</p>
+<p>En el momento de la renovaci&oacute;n ser&aacute; posible solicitar recursos adicionales. La evaluaci&oacute;n se
+   realizar&aacute; considerando el cumplimiento de los puntos detallados anteriormente, junto con la
+   documentaci&oacute;n adicional presentada por el solicitante.</p>
+<p>LACNIC publicar&aacute; la informaci&oacute;n referente a la solicitud de recursos adicionales en una p&aacute;gina
+   Web p&uacute;blica (a definir por LACNIC) y anunciar&aacute; la existencia de dicha solicitud a trav&eacute;s de una
+   lista de correo de suscripci&oacute;n abierta (a definir por LACNIC). LACNIC esperar&aacute; un plazo de 15
+   d&iacute;as antes de realizar la distribuci&oacute;n de recursos adicionales para recibir comentarios de la
+   comunidad.</p>
+<h1> 11. POLÍTICAS SOBRE EL AGOTAMIENTO DEL ESPACIO DE DIRECCIONES IPv4.</h1>
+
+<p>Las siguientes pol&iacute;ticas se relacionan al proceso de agotamiento del espacio de direcciones IPv4.</p>
+<h2><a name="_Toc149"></a>11.1.Reserva especial de distribuciones/asignaciones IPv4 para nuevos miembros.</h2>
+<ol>
+   <li>LACNIC crear&aacute; una reserva de direccionamiento IPv4 utilizando el espacio distribuido por la IANA a LACNIC
+      post agotamiento, considerando adem&aacute;s del espacio recuperado y devuelto mencionado en la secci&oacute;n 7
+      del manual de pol&iacute;ticas.</li>
+   <li>No se har&aacute;n distribuciones o asignaciones de recursos IPv4 a organizaciones que ya tengan recursos IPv4
+      distribuidos o asignados por LACNIC o por las organizaciones que antecedieron a LACNIC en esta reserva en la
+      actual regi&oacute;n de servicio de LACNIC.</li>
+   <li>Solicitudes de recursos IPv4 que seg&uacute;n las pol&iacute;ticas vigentes de LACNIC sean clasificadas como
+      infraestructura critica podr&aacute;n recibir direccionamiento bajo las condiciones de esta pol&iacute;tica aunque
+      ya cuenten con recurso IPv4 asignado por LACNIC.</li>
+   <li>LACNIC solo podr&aacute; realizar distribuciones o asignaciones de recursos IPv4 mayores o iguales a /24 y
+      menores o iguales a /22 de esta reserva.</li>
+   <li>LACNIC podr&aacute; realizar distribuciones o asignaciones de esta reserva a partir de la aprobaci&oacute;n de la
+      primera solicitud de recursos IPv4 que no pueda ser satisfecha utilizando la reserva creada en el punto 11.2.</li>
+   <li>Las solicitudes de recursos IPv4 de prefijos menores a /22 que se encuentren pendientes por aprobaci&oacute;n
+      solo podr&aacute;n recibir un /22 de esta reserva.</li>
+   <li>Las organizaciones que reciban recursos IPv4 bajo las condiciones establecidas en la siguiente pol&iacute;tica no
+      podr&aacute;n recibir recursos IPv4 adicionales por parte de LACNIC provenientes de esta reserva, exceptuando
+      solicitudes para infraestructura cr&iacute;tica</li>
+   <li>Un bloque recibido bajo esta pol&iacute;tica no podr&aacute; ser transferido siguiendo el punto 2.3.2.18 del
+      manual de pol&iacute;ticas durante un periodo de tres a&ntilde;os. Lo mismo aplica para sus subbloques, es decir,
+      bloques que agrupen un subconjunto de las direcciones IPv4 que contiene el bloque.</li>
+   <li>La presente pol&iacute;tica no substituye el punto 11.2 del Manual de Pol&iacute;ticas. La reserva creada bajo el
+      punto 11.2 es independiente a la reserva creada bajo la siguiente pol&iacute;tica.</li>
+   <li>En caso de que el solicitante a&uacute;n no cuente con un bloque IPv6 asignado por LACNIC, tambi&eacute;n
+      deber&aacute; solicitar un bloque IPv6 cumpliendo con la pol&iacute;tica aplicable.</li>
+</ol>
+<h2><a name="_Toc150"></a>11.2.Distribuciones/asignaciones para una terminaci&oacute;n gradual de recursos IPv4</h2>
+<ol>
+   <li>LACNIC crear&aacute; una reserva de un /10 de direccionamiento IPv4 con motivo de realizar una terminaci&oacute;n
+      gradual de recursos IPv4 en la regi&oacute;n LACNIC.</li>
+</ol>
+<ol start="2">
+   <li>LACNIC solo podr&aacute; realizar distribuciones o asignaciones de recursos IPv4 mayores o iguales a /24 y
+      menores o iguales a /22 de esta reserva.</li>
+</ol>
+<ol start="3">
+   <li>LACNIC podr&aacute; realizar distribuciones o asignaciones de esta reserva a partir de la aprobaci&oacute;n de la
+      primera solicitud de recursos IPv4 que no pueda ser satisfecha en su totalidad por falta de recursos IPv4 en la
+      regi&oacute;n LACNIC.</li>
+</ol>
+<ol start="4">
+   <li>Las solicitudes de recursos IPv4 menores a /22 que se encuentren pendientes por aprobaci&oacute;n solo
+      podr&aacute;n recibir un /22 una vez que esta pol&iacute;tica es vigente.</li>
+</ol>
+<ol start="5">
+   <li>Las organizaciones que reciban recursos IPv4 de LACNIC bajo las condiciones establecidas en la siguiente
+      pol&iacute;tica podr&aacute;n recibir recursos IPv4 adicionales por parte de LACNIC seis meses despu&eacute;s
+      siempre y cuando generen una nueva solicitud que justifique la necesidad de recursos IPv4 adicionales seg&uacute;n
+      las pol&iacute;ticas vigentes de distribuci&oacute;n o asignaci&oacute;n de direccionamiento IPv4. Las
+      organizaciones que soliciten direccionamiento para infraestructura critica, podr&aacute;n solicitar hasta un /22
+      en cualquier momento.</li>
+</ol>
+<ol start="6">
+   <li>Un bloque recibido bajo esta pol&iacute;tica no podr&aacute; ser transferido siguiendo el punto 2.3.2.18 del
+      manual de pol&iacute;ticas durante un periodo de tres a&ntilde;os. Lo mismo aplica para sus subbloques, es decir,
+      bloques que agrupen un subconjunto de las direcciones IPv4 que contiene el bloque.</li>
+</ol>
+<ol start="7">
+   <li>La presente propuesta no substituye el punto 11.1 del manual de pol&iacute;ticas. La reserva creada bajo el punto
+      11.1 es independiente a la reserva creada bajo la siguiente propuesta.</li>
+</ol>
+<h2><a name="_Toc151"></a>11.3.Distribuciones/asignaciones de espacio IPv4 distribuido por la IANA post agotamiento</h2>
+<p>Los recursos IPv4 distribuidos por la IANA a LACNIC una vez que el punto 11.2 del Manual de Pol&iacute;ticas sea
+   vigente solamente podr&aacute;n ser distribuidos/asignados bajo los lineamientos definidos en el punto 11.1 del
+   Manual de Pol&iacute;ticas.</p>
+<h1> 12. Registro y validación de “abuse-c” y “abuse-mailbox”</h1>
+
+<h2><a name="_Toc153"></a>12.1.Descripci&oacute;n del &ldquo;abuse-c&rdquo; y &ldquo;abuse-mailbox&rdquo;</h2>
+<p>Todos los recursos que utilicen los sistemas de registro de LACNIC deben incluir obligatoriamente, en las entradas de
+   WHOIS correspondientes, el atributo de contacto abuse-c (contacto de abuso), como m&iacute;nimo con un email
+   abuse-mailbox v&aacute;lido, monitorizado y adecuadamente atendido, que permita enviar reportes manuales o
+   autom&aacute;ticos de comportamientos abusivos, seguridad, y similares.<br /> <br /> El atributo abuse-mailbox debe
+   estar disponible sin restricciones v&iacute;a whois, APIs y futuras tecnolog&iacute;as.</p>
+<p>Teniendo en cuenta la naturaleza jer&aacute;rquica de los objetos, los heredados de aquellos distribuidos
+   directamente por LACNIC (por ejemplo, sub-asignaciones), est&aacute;n cubiertos por los objetos de nivel superior y
+   su propio atributo &ldquo;abuse-c&rdquo; es opcional.</p>
+<p>Siguiendo pr&aacute;cticas habituales, otros atributos &ldquo;email&rdquo; pueden ser incluidos para otros
+   prop&oacute;sitos.</p>
+<h2><a name="_Toc154"></a>12.2.Acerca del &ldquo;abuse-mailbox&rdquo;<br /> <br /> El &ldquo;abuse-mailbox&rdquo; tiene
+   las siguientes caracter&iacute;sticas:<br /> &bull; Requiere intervenci&oacute;n por parte del destinatario.<br />
+   &bull; No debe exigir el uso de un formulario para reportar un abuso.<br /> &bull; Debe garantizar que los reportes
+   de abuso, logs, cabeceras, ejemplos, etc., relativos al caso de abuso, sean recibidos.</h2>
+<h2><a name="_Toc155"></a>12.3.Objetivos de la validaci&oacute;n del &ldquo;abuse-c&rdquo;/&ldquo;abuse-mailbox&rdquo;
+</h2>
+<p>El procedimiento, que habr&aacute; de ser desarrollado por LACNIC, deber&aacute; cumplir con estos objetivos:<br />
+   <br /> 1) Proceso simple que garantice su funcionalidad y el cumplimiento de su prop&oacute;sito.<br /> 2) Confirmar
+   que quien valida:<br /> &bull; asegura conocer el procedimiento y las pol&iacute;ticas de LACNIC<br /> &bull;
+   monitoriza regularmente el &ldquo;abuse-mailbox&rdquo;<br /> &bull; toma medidas al respecto<br /> &bull; responde al
+   reporte de abuso.<br /> 3) Plazo de validaci&oacute;n &ldquo;inicial&rdquo; de 15 d&iacute;as.<br /> 4) Si no se
+   valida correctamente, escalado, por cualquier medio posible, con el resto de los contactos disponibles, en un plazo
+   &ldquo;adicional&rdquo; de 15 d&iacute;as.
+</p>
+<h2><a name="_Toc156"></a>12.4.Validaci&oacute;n del "abuse-c"/"abuse-mailbox"</h2>
+<p>LACNIC validar&aacute; el cumplimiento de la pol&iacute;tica de forma peri&oacute;dica, al menos dos veces al
+   a&ntilde;o, y cuando se creen o modifiquen los atributos del &ldquo;abuse-c&rdquo;.</p>
+<p>El incumplimiento por parte de cualquier organizaci&oacute;n se produce si no se ha validado en el plazo
+   &ldquo;inicial&rdquo; ni &ldquo;adicional&rdquo;.</p>
+<h2><a name="_Toc157"></a>12.5.Mecanismo de escalado a LACNIC</h2>
+<p>Comportamientos fraudulentos (por ejemplo, &ldquo;abuse-mailbox&rdquo; que solo responden a emails de LACNIC, a
+   determinado asunto o determinado cuerpo del mensaje), o el incumplimiento del resto de los aspectos de esta
+   pol&iacute;tica (la incorrecta o no atenci&oacute;n de los casos de abuso), podr&aacute;n ser reportados a LACNIC,
+   para su re-validaci&oacute;n seg&uacute;n 12.4.</p>
+<h1> A. APENDICES</h1>
+<h2><a name="_Toc159"></a>a. Ap&eacute;ndice 1. Lista de pa&iacute;ses y territorios de cobertura de LACNIC.</h2>
+<p>Lista de pa&iacute;ses y territorios de cobertura de LACNIC:</p>
+<p>Argentina</p>
+<p>Aruba</p>
+<p>Belice</p>
+<p>Bolivia</p>
+<p>Bonaire</p>
+<p>Brasil</p>
+<p>Chile</p>
+<p>Colombia</p>
+<p>Costa Rica</p>
+<p>Cuba</p>
+<p>Curazao</p>
+<p>Ecuador</p>
+<p>El Salvador</p>
+<p>Guatemala</p>
+<p>Guyana</p>
+<p>Guyana Francesa</p>
+<p>Hait&iacute;</p>
+<p>Honduras</p>
+<p>Islas Falkland (Malvinas)</p>
+<p>M&eacute;xico</p>
+<p>Nicaragua</p>
+<p>Panam&aacute;</p>
+<p>Paraguay</p>
+<p>Per&uacute;</p>
+<p>Rep&uacute;blica Dominicana</p>
+<p>Saba</p>
+<p>San Eustaquio</p>
+<p>San Martin</p>
+<p>South Georgia and The South Sandwich Islands</p>
+<p>Suriname</p>
+<p>Trinidad y Tobago</p>
+<p>Uruguay</p>
+<p>Venezuela</p>
+<h2><a name="_Toc160"></a>b. Ap&eacute;ndice 2: HD Ratio</h2>
+<p>El HD Ratio no tiene el fin de reemplazar las mediciones tradicionales de uso que los ISPs tienen actualmente con
+   IPv4. De hecho, el HD Ratio a&uacute;n requiere el conteo de objetos asignados. El principal valor del HD Ratio es su
+   utilidad al determinar los rangos razonables de utilizaci&oacute;n para un espacio de direcciones de un tama&ntilde;o
+   dado. Este documento utiliza el HD Ratio para determinar los rangos en los cuales una distribuci&oacute;n dada ha
+   alcanzado un nivel aceptable de utilizaci&oacute;n y se justifica la distribuci&oacute;n de espacio adicional.</p>
+<p>El rango de utilizaci&oacute;n T, expresado como un n&uacute;mero individual de prefijos /48 a ser distribuidos desde
+   un prefijo P de IPv6 puede ser calculado como:</p>
+<p>T=2((48-P)*HD)</p>
+<p>Por consiguiente, el rango de utilizaci&oacute;n de una organizaci&oacute;n que solicita subsecuentes distribuciones
+   de bloques de direcciones IPv6 es especificado en funci&oacute;n del tama&ntilde;o del prefijo y el HD ratio. Esta
+   utilizaci&oacute;n se refiere a la asignaci&oacute;n de /48s a los usuarios finales y no a la utilizaci&oacute;n de
+   esos /48s dentro de los usuarios finales. Es un HD ratio de la utilizaci&oacute;n de una distribuci&oacute;n de
+   direcciones y no de la utilizaci&oacute;n de una asignaci&oacute;n de direcciones.</p>
+<p>De acuerdo a las recomendaciones de [RFC 3194], este documento adopta un HD Ratio de 0.94 como el rango de
+   utilizaci&oacute;n para distribuciones de espacio de direcciones IPv6.</p>
+<p>La siguiente tabla ofrece cifras absolutas y porcentajes de utilizaci&oacute;n de direcciones equivalentes para
+   prefijos IPv6 correspondientes a un HD- Ratio de 0.94</p>
+<table class="tabla">
+   <tbody>
+      <tr>
+         <th>P</th>
+         <th>48 &ndash; P</th>
+         <th>total /48s</th>
+         <th>Threshold</th>
+         <th>Util %</th>
+      </tr>
+      <tr>
+         <td>
+            <p>48</p>
+         </td>
+         <td>
+            <p>0</p>
+         </td>
+         <td>
+            <p>1</p>
+         </td>
+         <td>
+            <p>1</p>
+         </td>
+         <td>
+            <p>100,0%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>47</p>
+         </td>
+         <td>
+            <p>1</p>
+         </td>
+         <td>
+            <p>2</p>
+         </td>
+         <td>
+            <p>2</p>
+         </td>
+         <td>
+            <p>95,9%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>46</p>
+         </td>
+         <td>
+            <p>2</p>
+         </td>
+         <td>
+            <p>4</p>
+         </td>
+         <td>
+            <p>4</p>
+         </td>
+         <td>
+            <p>92,0%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>45</p>
+         </td>
+         <td>
+            <p>3</p>
+         </td>
+         <td>
+            <p>8</p>
+         </td>
+         <td>
+            <p>7</p>
+         </td>
+         <td>
+            <p>88,3%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>44</p>
+         </td>
+         <td>
+            <p>4</p>
+         </td>
+         <td>
+            <p>16</p>
+         </td>
+         <td>
+            <p>14</p>
+         </td>
+         <td>
+            <p>84,7%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>43</p>
+         </td>
+         <td>
+            <p>5</p>
+         </td>
+         <td>
+            <p>32</p>
+         </td>
+         <td>
+            <p>26</p>
+         </td>
+         <td>
+            <p>81,2%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>42</p>
+         </td>
+         <td>
+            <p>6</p>
+         </td>
+         <td>
+            <p>64</p>
+         </td>
+         <td>
+            <p>50</p>
+         </td>
+         <td>
+            <p>77,9%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>41</p>
+         </td>
+         <td>
+            <p>7</p>
+         </td>
+         <td>
+            <p>128</p>
+         </td>
+         <td>
+            <p>96</p>
+         </td>
+         <td>
+            <p>74,7%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>40</p>
+         </td>
+         <td>
+            <p>8</p>
+         </td>
+         <td>
+            <p>256</p>
+         </td>
+         <td>
+            <p>184</p>
+         </td>
+         <td>
+            <p>71,7%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>39</p>
+         </td>
+         <td>
+            <p>9</p>
+         </td>
+         <td>
+            <p>512</p>
+         </td>
+         <td>
+            <p>352</p>
+         </td>
+         <td>
+            <p>68,8%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>38</p>
+         </td>
+         <td>
+            <p>10</p>
+         </td>
+         <td>
+            <p>1024</p>
+         </td>
+         <td>
+            <p>676</p>
+         </td>
+         <td>
+            <p>66,0%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>37</p>
+         </td>
+         <td>
+            <p>11</p>
+         </td>
+         <td>
+            <p>2048</p>
+         </td>
+         <td>
+            <p>1296</p>
+         </td>
+         <td>
+            <p>63,3%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>36</p>
+         </td>
+         <td>
+            <p>12</p>
+         </td>
+         <td>
+            <p>4096</p>
+         </td>
+         <td>
+            <p>2487</p>
+         </td>
+         <td>
+            <p>60,7%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>35</p>
+         </td>
+         <td>
+            <p>13</p>
+         </td>
+         <td>
+            <p>8192</p>
+         </td>
+         <td>
+            <p>4771</p>
+         </td>
+         <td>
+            <p>58,2%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>34</p>
+         </td>
+         <td>
+            <p>14</p>
+         </td>
+         <td>
+            <p>16384</p>
+         </td>
+         <td>
+            <p>9153</p>
+         </td>
+         <td>
+            <p>55,9%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>33</p>
+         </td>
+         <td>
+            <p>15</p>
+         </td>
+         <td>
+            <p>32768</p>
+         </td>
+         <td>
+            <p>17560</p>
+         </td>
+         <td>
+            <p>53,6%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>32</p>
+         </td>
+         <td>
+            <p>16</p>
+         </td>
+         <td>
+            <p>65536</p>
+         </td>
+         <td>
+            <p>33689</p>
+         </td>
+         <td>
+            <p>51,4%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>31</p>
+         </td>
+         <td>
+            <p>17</p>
+         </td>
+         <td>
+            <p>131072</p>
+         </td>
+         <td>
+            <p>64634</p>
+         </td>
+         <td>
+            <p>49,3%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>30</p>
+         </td>
+         <td>
+            <p>18</p>
+         </td>
+         <td>
+            <p>262144</p>
+         </td>
+         <td>
+            <p>124002</p>
+         </td>
+         <td>
+            <p>47,3%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>29</p>
+         </td>
+         <td>
+            <p>19</p>
+         </td>
+         <td>
+            <p>524288</p>
+         </td>
+         <td>
+            <p>237901</p>
+         </td>
+         <td>
+            <p>45,4%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>28</p>
+         </td>
+         <td>
+            <p>20</p>
+         </td>
+         <td>
+            <p>1048576</p>
+         </td>
+         <td>
+            <p>456419</p>
+         </td>
+         <td>
+            <p>43,5%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>27</p>
+         </td>
+         <td>
+            <p>21</p>
+         </td>
+         <td>
+            <p>2097152</p>
+         </td>
+         <td>
+            <p>875653</p>
+         </td>
+         <td>
+            <p>41,8%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>26</p>
+         </td>
+         <td>
+            <p>22</p>
+         </td>
+         <td>
+            <p>4194304</p>
+         </td>
+         <td>
+            <p>1679965</p>
+         </td>
+         <td>
+            <p>40,1%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>25</p>
+         </td>
+         <td>
+            <p>23</p>
+         </td>
+         <td>
+            <p>8388608</p>
+         </td>
+         <td>
+            <p>3223061</p>
+         </td>
+         <td>
+            <p>38,4%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>24</p>
+         </td>
+         <td>
+            <p>24</p>
+         </td>
+         <td>
+            <p>16777216</p>
+         </td>
+         <td>
+            <p>6183533</p>
+         </td>
+         <td>
+            <p>36,9%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>23</p>
+         </td>
+         <td>
+            <p>25</p>
+         </td>
+         <td>
+            <p>33554432</p>
+         </td>
+         <td>
+            <p>11863283</p>
+         </td>
+         <td>
+            <p>35,4%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>22</p>
+         </td>
+         <td>
+            <p>26</p>
+         </td>
+         <td>
+            <p>67108864</p>
+         </td>
+         <td>
+            <p>22760044</p>
+         </td>
+         <td>
+            <p>33,9%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>21</p>
+         </td>
+         <td>
+            <p>27</p>
+         </td>
+         <td>
+            <p>134217728</p>
+         </td>
+         <td>
+            <p>43665787</p>
+         </td>
+         <td>
+            <p>32,5%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>20</p>
+         </td>
+         <td>
+            <p>28</p>
+         </td>
+         <td>
+            <p>268435456</p>
+         </td>
+         <td>
+            <p>83774045</p>
+         </td>
+         <td>
+            <p>31,2%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>19</p>
+         </td>
+         <td>
+            <p>29</p>
+         </td>
+         <td>
+            <p>536870912</p>
+         </td>
+         <td>
+            <p>160722871</p>
+         </td>
+         <td>
+            <p>29,9%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>18</p>
+         </td>
+         <td>
+            <p>30</p>
+         </td>
+         <td>
+            <p>1073741824</p>
+         </td>
+         <td>
+            <p>308351367</p>
+         </td>
+         <td>
+            <p>28,7%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>17</p>
+         </td>
+         <td>
+            <p>31</p>
+         </td>
+         <td>
+            <p>2147483648</p>
+         </td>
+         <td>
+            <p>591580804</p>
+         </td>
+         <td>
+            <p>27,5%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>16</p>
+         </td>
+         <td>
+            <p>32</p>
+         </td>
+         <td>
+            <p>4294967296</p>
+         </td>
+         <td>
+            <p>1134964479</p>
+         </td>
+         <td>
+            <p>26,4%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>15</p>
+         </td>
+         <td>
+            <p>33</p>
+         </td>
+         <td>
+            <p>8589934592</p>
+         </td>
+         <td>
+            <p>2177461403</p>
+         </td>
+         <td>
+            <p>25,3%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>14</p>
+         </td>
+         <td>
+            <p>34</p>
+         </td>
+         <td>
+            <p>17179869184</p>
+         </td>
+         <td>
+            <p>4177521189</p>
+         </td>
+         <td>
+            <p>24,3%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>13</p>
+         </td>
+         <td>
+            <p>35</p>
+         </td>
+         <td>
+            <p>34359738368</p>
+         </td>
+         <td>
+            <p>8014692369</p>
+         </td>
+         <td>
+            <p>23,3%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>12</p>
+         </td>
+         <td>
+            <p>36</p>
+         </td>
+         <td>
+            <p>68719476736</p>
+         </td>
+         <td>
+            <p>15376413635</p>
+         </td>
+         <td>
+            <p>22,4%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>11</p>
+         </td>
+         <td>
+            <p>37</p>
+         </td>
+         <td>
+            <p>1,37439E+11</p>
+         </td>
+         <td>
+            <p>29500083768</p>
+         </td>
+         <td>
+            <p>21,5%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>10</p>
+         </td>
+         <td>
+            <p>38</p>
+         </td>
+         <td>
+            <p>2,74878E+11</p>
+         </td>
+         <td>
+            <p>56596743751</p>
+         </td>
+         <td>
+            <p>20,6%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>9</p>
+         </td>
+         <td>
+            <p>39</p>
+         </td>
+         <td>
+            <p>5,49756E+11</p>
+         </td>
+         <td>
+            <p>108582451102</p>
+         </td>
+         <td>
+            <p>19,8%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>8</p>
+         </td>
+         <td>
+            <p>40</p>
+         </td>
+         <td>
+            <p>1,09951E+12</p>
+         </td>
+         <td>
+            <p>208318498661</p>
+         </td>
+         <td>
+            <p>18,9%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>7</p>
+         </td>
+         <td>
+            <p>41</p>
+         </td>
+         <td>
+            <p>2,19902E+12</p>
+         </td>
+         <td>
+            <p>399664922315</p>
+         </td>
+         <td>
+            <p>18,2%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>6</p>
+         </td>
+         <td>
+            <p>42</p>
+         </td>
+         <td>
+            <p>4,39805E+12</p>
+         </td>
+         <td>
+            <p>766768439460</p>
+         </td>
+         <td>
+            <p>17,4%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>5</p>
+         </td>
+         <td>
+            <p>43</p>
+         </td>
+         <td>
+            <p>8,79609E+12</p>
+         </td>
+         <td>
+            <p>1471066903609</p>
+         </td>
+         <td>
+            <p>16,7%</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>4</p>
+         </td>
+         <td>
+            <p>44</p>
+         </td>
+         <td>
+            <p>1,75922E+13</p>
+         </td>
+         <td>
+            <p>2822283395519</p>
+         </td>
+         <td>
+            <p>16,0%</p>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<h2><a name="_Toc161"></a>c. Ap&eacute;ndice 3: Reporte adicional para la distribuci&oacute;n de espacio de direcciones
+   IPv4</h2>
+<table class="tabla">
+   <tbody>
+      <tr>
+         <th>Ciudad</th>
+         <th>Direcciones IP asignadas</th>
+         <th>N&uacute;mero de puertos</th>
+         <th>Numero de clientes dial up</th>
+      </tr>
+      <tr>
+         <td>
+            <p>Ciudad</p>
+         </td>
+         <td>
+            <p>Direcciones IP asignadas</p>
+         </td>
+         <td>
+            <p>N&uacute;mero de hosts internos</p>
+         </td>
+         <td>
+            <p>Prop&oacute;sito</p>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<h2>&nbsp;</h2>
+<h2><a name="_Toc162"></a>e. Ap&eacute;ndice 4: Reporte de distribuci&oacute;n de recursos IPv4</h2>
+<p>La siguiente planilla, tiene como prop&oacute;sito informar a LACNIC la distribuci&oacute;n de bloques IPv4 asignado
+   a su Organizaci&oacute;n, por favor, complete las columnas con la informaci&oacute;n solicitada. Tenga en cuenta que
+   solo deber&aacute; detallar los bloques asignados directamente por LACNIC o un NIR (M&eacute;xico o Brasil) y cuyas
+   subasignaciones sean iguales o menores a /30.</p>
+<p><img src="https://www.lacnic.net/innovaportal/file/555/1/reporte_distribucion_-recursos_ipv4.jpg" /></p>
+<h2><a name="_Toc163"></a>f. Ap&eacute;ndice 5: Requisitos para los candidatos para el ASO AC</h2>
+<p><strong>Proceso de Nominaciones del Address Council</strong></p>
+<p>Cualquier individuo proveniente de la regi&oacute;n de LACNIC puede ser nominado en este proceso, con la
+   excepci&oacute;n de los integrantes del staff de cualquier RIR, los integrantes del Directorio de LACNIC y las
+   personas de la misma nacionalidad de alguno de los miembros en ejercicio en el ASO/AC elegidos por la comunidad de
+   LACNIC.</p>
+<p>Auto nominaciones son permitidas.</p>
+<p>Los candidatos, para ser admitidos, deber&aacute;n declarar tener conocimiento del proceso de desarrollo de
+   pol&iacute;ticas de LACNIC, el rol del ASO AC y las formas de participaci&oacute;n de la comunidad en estos procesos.
+</p>
+<p>Si vencido el plazo para la presentaci&oacute;n de candidatos no se hubiera presentado ning&uacute;n candidato que
+   cumpla con todos los requerimientos, se anunciar&aacute; un nuevo plazo de 15 d&iacute;as para la presentaci&oacute;n
+   de candidatos donde no regir&aacute; la restricci&oacute;n relativa al pa&iacute;s de procedencia de los candidatos.
+</p>
+<p>En caso de que un miembro del ASO AC sea elegido para ocupar un cargo en el Directorio de LACNIC, &eacute;ste
+   deber&aacute; renunciar a su cargo en el ASO AC antes de asumir su cargo en el Directorio.</p>
+<h1><a name="_Toc164"></a><em>B. </em><em>REFERENCIAS</em></h1>
+<p>[RFC 1112] &ldquo;Host extensions for IP multicasting&rdquo; S.E. Deering&nbsp;</p>
+<p>08/1989</p>
+<p>RFC 1112</p>
+<p>[RFC 1466] &ldquo;Guidelines for Management of IP Address Space&rdquo; E. Gerich 05/1993 RFC 1466</p>
+<p>[RFC 1518] &ldquo;An Architecture for IP Address Allocation with CIDR&rdquo;, Y. Rekhter and T. Li 09/1993 RFC 1518
+</p>
+<p>[RFC 1519] &ldquo;Classless Inter&minus;Domain Routing (CIDR): an Address Assignment and Aggregation Strategy&rdquo;,
+   V. Fuller, T. Li, J. Yu, and K. Varadham, 09/1993 RFC 1519</p>
+<p>[RFC 1715] "The H Ratio for Address Assignment Efficiency", C. Huitema.</p>
+<p>November 1994, RFC 1715.</p>
+<p>[RFC 1918] &ldquo;Address Allocation for Private Internets&rdquo;, Y. Rekhter , D. Karrenberg , R. Moskowitz , G. de
+   Groot , and E. Lear 02/1996 RFC 1918.</p>
+<p>[RFC 1930] &ldquo;Guidelines for creation, selection and registration de an Autonomous System (AS)&rdquo;, J.
+   Hawkinson 03/1996 RFC 1930.</p>
+<p>[RFC 2050] &ldquo;Internet Registry IP Allocation Guidelines&rdquo;, K. Hubbard, M. Kosters, D. Conrad, D.
+   Karrenberg, J. Postel 11/1996 RFC 2050.</p>
+<p>[RFC 2317] &ldquo;Classless IN&minus;ADDR.ARPA delegation&rdquo;, H. Eidnes, G. de Groot, P. Vixie</p>
+<p>03/1998 RFC 2317</p>
+<p>[RFC 2373] "IP Version 6 Addressing Architecture", R. Hinden, S. Deering.</p>
+<p>July 1998, RFC 2373.</p>
+<p>[RFC 2373bis] http://www.ietf.org/internet-drafts/draft-ietf-ipngwg-addr-arch-v3-07.txt</p>
+<p>[RFC 2928] "Initial IPv6 Sub TLA ID Assignments", R. Hinden, S. Deering, R. Fink, T. Hain. September 2000, RFC 2928.
+</p>
+<p>[RFC 3177] "IAB/IESG Recommendations on IPv6 Address". IAB, IESG. September 2001, RFC 3177.</p>
+<p>[RFC 3194] "The H Density Ratio for Address Assignment Efficiency An Update on the H ratio", A. Durand, C. Huitema.
+   November 2001, RFC 3194.</p>
+<p>[RFC 4893] &ldquo;BGP Support for Four-octet AS Number Space&rdquo;, Q. Vohra, E. Chen 05/2007</p>
+<p>RFC 4893.</p>
+<p>[IAB Request] "Email from IAB to IANA", http://www.iab.org/iab/DOCUMENTS/IPv6addressspace.txt</p>
+<p>[RIRs on 48] http://www.arin.net/policy/ipv6reassign.html</p>
+<p>[RIRv6 Policies]</p>
+<p><a
+      href="http://www.apnic.net/policy/ipv6-address-policy.html">http://www.apnic.net/policy/ipv6-address-policy.html</a>
+</p>
+<p><a
+      href="https://www.afrinic.net/docs/policies/afpol-v6200407-000.htm">https://www.afrinic.net/docs/policies/afpol-v6200407-000.htm</a>
+</p>
+<p><a href="http://www.ripe.net/ripe/docs/ripe-466.html">http://www.ripe.net/ripe/docs/ripe-466.html</a></p>
+<p><a href="https://www.arin.net/policy/nrpm.html">https://www.arin.net/policy/nrpm.html</a></p>
