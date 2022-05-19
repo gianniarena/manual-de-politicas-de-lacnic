@@ -2319,6 +2319,7 @@ La siguiente tabla ofrece cifras absolutas y porcentajes de utilización de dire
  IPv4
 
 | Ciudad | Direcciones IP asignadas | Número de puertos | Numero de clientes dial up |
+| -------|:------------------------:|:------------------------:|----------:|
 | Ciudad | Direcciones IP asignadas | Número de hosts internos | Propósito |
 
 ## e. Apéndice 4: Reporte de distribución de recursos IPv4
